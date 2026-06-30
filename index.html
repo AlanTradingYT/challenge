@@ -1,0 +1,1297 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<title>De 10K à 100K · La stratégie · Édition #2 · Juin 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#05070c;font-family:'Helvetica Neue',Arial,sans-serif;}
+.page{width:924px;height:1316px;background:#0b0e15;color:#e6edf3;position:relative;
+  padding:62px 60px 58px;overflow:hidden;margin:0 auto 26px;
+  display:flex;flex-direction:column;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@media print{
+  @page{ size:244.6mm 348.4mm; margin:0; }
+  html,body{background:#0b0e15;margin:0;padding:0;}
+  .page{margin:0 !important;width:244.6mm;height:348.4mm;page-break-after:always;break-after:page;box-shadow:none;}
+  .page:last-child{page-break-after:auto;break-after:auto;}
+}
+.kicker{color:#22c98a;font-size:14px;letter-spacing:6px;font-weight:700;text-transform:uppercase;}
+.h2{font-size:46px;font-weight:800;margin-top:16px;line-height:1.05;}
+.bar{width:66px;height:5px;background:linear-gradient(90deg,#22c98a,#22d3ee);border-radius:3px;margin:20px 0 0;}
+.lead{color:#aeb8c4;font-size:20px;line-height:1.5;margin-top:26px;}
+p{font-size:18px;line-height:1.72;color:#c4cdd8;}
+strong{color:#e6edf3;}
+.green{color:#22c98a;}.cyan{color:#22d3ee;}.amber{color:#f5b945;}.red{color:#f0616d;}.mut{color:#8b97a6;}
+.foot{display:flex;justify-content:space-between;font-size:13px;color:#5a6675;border-top:1px solid #1c2633;padding-top:16px;margin-top:auto;}
+.body{flex:1;display:flex;flex-direction:column;}
+
+/* COVER */
+.cv-top{margin-top:120px;}
+.cv-title{font-size:66px;font-weight:800;line-height:1.04;margin-top:18px;}
+.grad{background:linear-gradient(90deg,#22c98a,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.cv-who{display:flex;align-items:center;gap:30px;margin-top:60px;}
+.cv-who img{width:130px;height:130px;border-radius:18px;border:2px solid #22c98a;object-fit:cover;box-shadow:0 0 28px rgba(34,201,138,.3);}
+.cv-nm{font-size:34px;font-weight:800;}
+.cv-ro{color:#22c98a;font-weight:700;font-size:17px;margin:8px 0;}
+.cv-desc{font-size:20px;line-height:1.6;color:#c4cdd8;margin-top:54px;max-width:680px;}
+.cv-stats{display:flex;border:1px solid #1c2633;border-radius:20px;overflow:hidden;margin-top:auto;}
+.cv-stats .s{flex:1;padding:34px 28px;border-right:1px solid #1c2633;}
+.cv-stats .s:last-child{border:none;}
+.cv-stats .v{font-size:42px;font-weight:800;}
+.cv-stats .l{font-size:12px;letter-spacing:2px;color:#8b97a6;text-transform:uppercase;margin-top:10px;}
+.cv-foot{display:flex;justify-content:space-between;font-size:14px;color:#5a6675;border-top:1px solid #1c2633;padding-top:16px;margin-top:34px;}
+
+/* generic cards row (equal height) */
+.row3{display:flex;gap:20px;align-items:stretch;}
+.row2{display:flex;gap:20px;align-items:stretch;}
+.pcard{flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:18px;padding:30px;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.pcard .topbar{position:absolute;top:0;left:0;right:0;height:5px;}
+.pcard .em{font-size:38px;margin-bottom:18px;}
+.pcard .tag{font-size:12px;letter-spacing:2px;color:#8b97a6;text-transform:uppercase;margin-bottom:10px;}
+.pcard .ph{font-size:24px;font-weight:700;margin-bottom:14px;}
+.pcard p{font-size:16px;line-height:1.6;}
+
+/* flow */
+.flow{display:flex;align-items:stretch;gap:12px;}
+.flow .step{flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:16px;padding:26px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center;}
+.flow .step.fire{border-color:rgba(240,97,109,.4);background:rgba(240,97,109,.06);}
+.flow .num{width:38px;height:38px;border-radius:50%;border:2px solid #22c98a;color:#22c98a;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:17px;font-weight:700;}
+.flow .st{font-size:19px;font-weight:700;margin-bottom:8px;}
+.flow .sd{font-size:14px;color:#8b97a6;line-height:1.4;}
+.flow .arr{display:flex;align-items:center;color:#22c98a;font-size:24px;}
+
+/* callout */
+.callout{border-radius:0 14px 14px 0;padding:26px 30px;font-size:18px;line-height:1.6;color:#c4cdd8;}
+.callout.amber{background:rgba(245,185,69,.07);border-left:5px solid #f5b945;}
+.callout.red{background:rgba(240,97,109,.07);border-left:5px solid #f0616d;}
+.callout.cyan{background:rgba(34,211,238,.06);border-left:5px solid #22d3ee;}
+.callout.green{background:rgba(34,201,138,.06);border-left:5px solid #22c98a;}
+.quote{border-left:5px solid #22c98a;padding:18px 0 18px 30px;font-size:30px;font-weight:300;font-style:italic;color:#cdd6e0;line-height:1.4;}
+
+/* stats grid */
+.sgrid{display:flex;flex-wrap:wrap;gap:20px;}
+.scard{background:#0e1420;border:1px solid #1c2633;border-radius:18px;padding:28px 30px;width:calc((100% - 40px)/3);}
+.scard .v{font-size:40px;font-weight:800;}
+.scard .l{font-size:13px;letter-spacing:2px;color:#8b97a6;text-transform:uppercase;margin-top:12px;}
+
+/* table */
+table{width:100%;border-collapse:collapse;border:1px solid #1c2633;border-radius:14px;overflow:hidden;}
+th,td{text-align:left;padding:18px 22px;border-bottom:1px solid #1c2633;font-size:17px;}
+th{color:#8b97a6;font-size:13px;letter-spacing:1px;text-transform:uppercase;background:#0e1420;}
+td{color:#c4cdd8;}
+tr:last-child td{border-bottom:none;}
+
+/* badges */
+.badge{display:inline-block;padding:5px 15px;border-radius:8px;font-size:14px;font-weight:700;letter-spacing:.5px;vertical-align:middle;}
+.b-long{background:rgba(34,201,138,.18);color:#22c98a;}
+.b-short{background:rgba(240,97,109,.18);color:#f0616d;}
+.b-setup{background:#3b82f6;color:#04122b;}
+.b-setupp{background:#22c98a;color:#04150e;}
+.b-setupb{background:#6b7787;color:#0b0e15;}
+.b-gain{background:rgba(34,201,138,.18);color:#22c98a;}
+.b-perte{background:rgba(240,97,109,.18);color:#f0616d;}
+
+/* trade fiche */
+.fiche{flex:1;background:#0d121c;border:1px solid #1c2633;border-radius:22px;padding:36px 40px;display:flex;flex-direction:column;}
+.fhead{display:flex;justify-content:space-between;align-items:flex-start;}
+.ftitle{font-size:34px;font-weight:800;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.fsub{color:#8b97a6;font-size:16px;margin-top:10px;}
+.fres{font-size:38px;font-weight:800;text-align:right;line-height:1.1;}
+.fhr{height:1px;background:#1c2633;margin:26px 0;}
+.fcols{display:flex;gap:40px;}
+.fcol{flex:1;}
+.slab{font-size:19px;font-weight:700;margin-bottom:12px;}
+.ctx{font-size:16px;margin-bottom:10px;line-height:1.5;}
+.ctx .k{color:#8b97a6;font-weight:600;}
+.fcol p{font-size:16px;line-height:1.62;color:#c4cdd8;margin-bottom:18px;}
+.prices{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+.pb{background:#0e1420;border:1px solid #1c2633;border-radius:12px;padding:13px 18px;min-width:108px;}
+.pb .k{font-size:10px;letter-spacing:1.5px;color:#8b97a6;text-transform:uppercase;}
+.pb .v{font-size:18px;font-weight:700;margin-top:6px;}
+.fbody{display:flex;flex-direction:column;}
+.ff{display:flex;gap:28px;margin-top:8px;}
+.ff .h{font-size:16px;font-weight:700;margin-bottom:11px;}
+.ff ul{list-style:none;}
+.ff li{font-size:15px;color:#c4cdd8;margin-bottom:9px;padding-left:18px;position:relative;line-height:1.45;}
+.ff li:before{content:"▸";position:absolute;left:0;color:#5a6675;}
+.lecon{background:#0e1726;border-left:5px solid #22d3ee;border-radius:0 14px 14px 0;padding:22px 26px;margin-top:26px;font-size:16px;font-style:italic;color:#b8c2cd;line-height:1.55;}
+.lecon b{font-style:normal;color:#22d3ee;letter-spacing:1px;}
+.shot{margin-top:24px;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:14px;text-align:center;}
+.shot img{max-width:62%;border-radius:10px;}
+</style></head><body>
+<div class="page">
+      <div style="display:flex;gap:50px;align-items:center;flex:1;">
+        <div style="flex:1.15;display:flex;flex-direction:column;">
+          <div class="kicker">Challenge Trading Crypto</div>
+          <div style="font-size:76px;font-weight:800;line-height:1.03;margin-top:20px;">De <span class="green">10K</span> à<br><span class="grad">100 000 $</span></div>
+          <div style="margin-top:46px;">
+            <div style="font-size:38px;font-weight:800;">Alan</div>
+            <div style="color:#22c98a;font-weight:700;font-size:19px;margin:8px 0;">Trader · Créateur de contenu</div>
+            <div class="mut" style="font-size:18px;">@AlanTradingYT</div>
+          </div>
+          <div style="font-size:20px;line-height:1.65;color:#c4cdd8;margin-top:42px;">La stratégie complète, expliquée pas à pas. Comment je repère une foule entière coincée du mauvais côté du marché, et comment je me place tôt dans le sens où elle va être forcée de déboucler.</div>
+        </div>
+        <div style="flex:0.85;display:flex;justify-content:center;">
+          <img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/00-profil.jpg" style="width:330px;height:420px;border-radius:24px;border:2px solid #22c98a;object-fit:cover;box-shadow:0 0 50px rgba(34,201,138,.35);"/>
+        </div>
+      </div>
+      <div class="cv-stats" style="margin-top:30px;">
+        <div class="s"><div class="v green">+18,65R</div><div class="l">Performance</div></div>
+        <div class="s"><div class="v">46,8%</div><div class="l">Win Rate</div></div>
+        <div class="s"><div class="v amber">1,83</div><div class="l">Profit Factor</div></div>
+        <div class="s"><div class="v">49</div><div class="l">Trades</div></div>
+      </div>
+      <div class="cv-foot"><span>Édition #2 · Juin 2026</span><span style="color:#e6edf3;font-weight:700;">@AlanTradingYT</span></div>
+    </div>
+<div class="page"><div class="body"><div class="kicker">Partie 1</div><div class="h2">L'esprit du challenge</div><div class="bar"></div>
+      <div class="lead">Salut à toi, et bienvenue dans ce challenge.</div>
+      <p style="margin-top:24px;">L'idée est simple : partir de <strong>10 000 $</strong> et tenter d'atteindre <strong>100 000 $</strong>, en documentant <strong>chaque trade</strong>, gagnant comme perdant, en toute transparence. Pas de résultats cachés, pas de « j'ai fait x10 cette nuit » sans preuve. Tu vois tout : les entrées, les sorties, les captures d'écran, et surtout le <strong>raisonnement</strong> derrière chaque décision.</p>
+      <p style="margin-top:18px;">Pourquoi cette transparence ? Parce que la plupart du contenu trading qu'on voit en ligne ne montre que les gains. Moi je veux te montrer la <strong>réalité</strong> d'une stratégie : elle perd parfois, elle gagne parfois, et c'est la <strong>rigueur sur la durée</strong> qui fait la différence, pas un coup de chance isolé.</p>
+      <div class="quote" style="margin:40px 0;">« Le marché ne récompense pas celui qui a raison le plus souvent. Il récompense celui qui reste discipliné quand il a tort. »</div>
+      <div class="row3" style="flex:1;">
+        <div class="pcard"><div class="em">🎯</div><div class="ph">Une méthode</div><p>Un cadre clair et répétable, pas du feeling au coup par coup.</p></div>
+        <div class="pcard"><div class="em">📓</div><div class="ph">Un journal</div><p>Chaque trade noté, analysé, classé. La data avant l'ego.</p></div>
+        <div class="pcard"><div class="em">🔍</div><div class="ph">Transparence</div><p>Les pertes affichées aussi clairement que les gains.</p></div>
+      </div>
+      <div class="callout amber" style="margin-top:30px;"><strong>⚠️ Important dès maintenant :</strong> ce document raconte mes premiers trades d'un challenge en cours. C'est un échantillon <strong>en construction</strong>, pas une vérité statistique. Tu vas apprendre une méthode et une façon de penser le marché, pas une machine à imprimer de l'argent. Le trading sur effet de levier comporte un <strong>risque réel de perte totale</strong>. Rien ici n'est un conseil d'investissement.</div></div><div class="foot"><span>De 10K à 100K · La stratégie</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 2</div><div class="h2">La philosophie</div><div class="bar"></div>
+      <div class="lead">Une seule idée centrale, et tout en découle.</div>
+      <p style="margin-top:24px;">Ma stratégie repose sur un principe : <strong>traquer une foule entière coincée du mauvais côté du marché, puis me placer dans le sens où elle va être forcée de déboucler.</strong></p>
+      <p style="margin-top:18px;">Quand trop de traders parient dans le même sens (par exemple une masse de vendeurs/shorts), ils deviennent <strong>du carburant</strong>. S'ils ont tort, ils doivent tous racheter en catastrophe au même moment : ça crée une accélération violente, un <strong>squeeze</strong>. Mon job n'est pas de deviner, c'est de <strong>lire</strong> quatre signaux qui, ensemble, disent qu'une foule est piégée et qu'une cible précise l'attend.</p>
+      <p style="margin-top:18px;">Le point clé qui a changé avec l'expérience : <strong>j'entre tôt, dès que ce profil est en place, sans attendre l'explosion.</strong> La cascade de liquidations finale n'est pas mon signal d'entrée, c'est mon signal de <strong>sortie</strong> : c'est elle qui propulse le prix jusqu'à ma cible. L'attendre pour entrer, ce serait acheter le sommet.</p>
+      <div style="font-size:30px;font-weight:800;margin:42px 0 26px;">Comment naît un squeeze</div>
+      <div class="flow">
+        <div class="step"><div class="num">1</div><div class="st">Excès</div><div class="sd">Une foule s'entasse du même côté (foule + funding)</div></div>
+        <div class="arr">→</div>
+        <div class="step"><div class="num">2</div><div class="st">Le flux trahit</div><div class="sd">Les vrais ordres (CVD) poussent dans l'autre sens</div></div>
+        <div class="arr">→</div>
+        <div class="step"><div class="num">3</div><div class="st">Accumulation</div><div class="sd">L'argent frais entre (OI en hausse), le piège se charge</div></div>
+        <div class="arr">→</div>
+        <div class="step fire"><div style="font-size:30px;margin-bottom:10px;">🔥</div><div class="st">Squeeze</div><div class="sd">La foule coincée déboucle en panique jusqu'à la cible</div></div>
+      </div>
+      <div class="callout green" style="margin-top:36px;"><strong style="color:#22c98a;font-size:21px;letter-spacing:1px;">FOULE PIÉGÉE → FLUX RÉEL → ARGENT FRAIS → CIBLE CLAIRE → J'ENTRE TÔT</strong><br><span style="color:#8b97a6;">La cascade de liquidations n'est pas le départ, c'est l'arrivée.</span></div>
+      <p style="margin-top:auto;padding-top:30px;">Dans les pages qui suivent, on décortique chacun de ces piliers, puis la façon dont je les combine pour noter mes setups et gérer mon risque. Tout est pensé pour transformer un <em>pari</em> en <em>probabilité</em>.</p></div><div class="foot"><span>De 10K à 100K · La stratégie</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 3</div><div class="h2">Les 4 piliers</div><div class="bar"></div>
+      <div class="lead">Un vrai signal coche quatre cases. Si une seule manque, je passe mon tour.</div>
+      <div class="row3" style="margin-top:30px;">
+        <div class="pcard"><div class="topbar" style="background:#22c98a;"></div><div class="em">🔥</div><div class="tag">Pilier 1 · Le carburant</div><div class="ph green">La foule à contre-sens</div><p>La foule ET les gros joueurs sont du mauvais côté (une masse de shorts quand je veux acheter). Ce sont eux qui devront racheter. Le funding extrême est un indice de cet excès, mais seul il ment souvent.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#3b82f6;"></div><div class="em">📈</div><div class="tag">Pilier 2 · L'arbitre du sens</div><div class="ph" style="color:#3b82f6;">Le flux réel (CVD)</div><p>Le CVD dit qui domine vraiment : acheteurs ou vendeurs. CVD acheteur = les acheteurs sont là, vrai long. Sans ce flux dans mon sens, le reste ne vaut rien.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#a855f7;"></div><div class="em">📊</div><div class="tag">Pilier 3 · L'accumulation</div><div class="ph" style="color:#a855f7;">L'argent frais (OI)</div><p>L'Open Interest doit <strong>monter</strong> : de l'argent neuf entre, le piège se charge. Un OI plat ou qui fond = la foule débale tranquillement, pas de squeeze.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#f0a93b;"></div><div class="em">🎯</div><div class="tag">Pilier 4 · La cible</div><div class="ph" style="color:#f0a93b;">Le cluster ≥3R</div><p>Un amas de liquidations clair, au moins <strong>3 fois plus loin que mon risque</strong>. C'est l'aimant à prix. Pas de cible réelle = pas de trade, je n'invente jamais un objectif dans le vide.</p></div>
+      </div>
+      <div class="callout green" style="margin-top:auto;"><strong style="color:#22c98a;font-size:19px;">📍 Pourquoi j'entre tôt</strong><br>Quand les 4 cases sont cochées, le bon moment c'est <strong>maintenant</strong>, pas après l'explosion. J'accepte d'avoir tort souvent (mon win rate est sous les 50%). Mon avantage n'est pas d'avoir raison, c'est que <strong>mes gains visent au moins 3 fois mes pertes</strong>.<br><strong class="green" style="font-size:20px;">Une seule cible payée rembourse plusieurs petits stops.</strong></div></div><div class="foot"><span>De 10K à 100K · La stratégie</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 4</div><div class="h2">La classification des setups</div><div class="bar"></div>
+      <div class="lead">Tous les setups ne se valent pas. Je les classe en trois niveaux : plus la note est haute, plus les 4 cases sont cochées et la cible nette.</div>
+      <div class="row3" style="margin-top:34px;">
+        <div class="pcard"><div class="topbar" style="background:#22c98a;"></div><div style="font-size:46px;font-weight:800;color:#22c98a;margin-bottom:14px;">A+</div><div class="ph">L'alignement parfait</div><p>Les 4 cases cochées <strong>et</strong> une cible nette à 3R ou plus. Le Graal : foule massivement piégée, flux franc, OI qui explose, cluster proche. Rare et payant.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#3b82f6;"></div><div style="font-size:46px;font-weight:800;color:#3b82f6;margin-bottom:14px;">A</div><div class="ph">Le cœur de la stratégie</div><p>Les 4 cases solides, cible présente, un cran sous le A+. Mon pain quotidien, et de loin le plus rentable. C'est là que je trade le plus souvent.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#f0616d;"></div><div style="font-size:46px;font-weight:800;color:#8b97a6;margin-bottom:14px;">B</div><div class="ph">Le setup incomplet</div><p>Une case faible : flux (CVD) mitigé, OI hésitant ou cible lointaine. Le plus risqué, souvent perdant. Quand je peux, je m'abstiens.</p></div>
+      </div>
+      <div class="callout amber" style="margin-top:30px;"><strong>📌 À retenir :</strong> la différence entre A et B n'est PAS la foule piégée, souvent identique. La différence, c'est <strong>le nombre de cases vraiment cochées et la qualité de la cible</strong>. Un setup où le flux ne suit pas, ou dont le cluster est trop loin, reste un B.</div>
+      <table style="margin-top:auto;">
+        <tr><th>Critère</th><th>Setup A+</th><th>Setup A</th><th>Setup B</th></tr>
+        <tr><td>Foule à contre-sens</td><td><strong>Massive</strong></td><td>Nette</td><td>Présente</td></tr>
+        <tr><td>Flux réel (CVD)</td><td><strong>Franchement aligné</strong></td><td>Aligné</td><td><strong>Faible / mitigé</strong></td></tr>
+        <tr><td>Argent frais (OI)</td><td><strong>Explose</strong></td><td>Monte</td><td>Hésitant</td></tr>
+        <tr><td>Cible (cluster)</td><td><strong>Nette, ≥3R</strong></td><td>Présente, ≥3R</td><td><strong>Lointaine / floue</strong></td></tr>
+        <tr><td>Niveau de risque</td><td class="green">Maîtrisé</td><td class="green">Maîtrisé</td><td class="red">Élevé</td></tr>
+      </table></div><div class="foot"><span>De 10K à 100K · La stratégie</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 5</div><div class="h2">La gestion du risque</div><div class="bar"></div>
+      <div class="lead">Si tu ne retiens qu'une seule partie de ce document, c'est celle-ci.</div>
+      <p style="margin-top:24px;">Ce qui fait exploser un compte, ce n'est jamais une seule mauvaise idée, c'est une mauvaise gestion du risque répétée. La bonne nouvelle : c'est la seule partie du trading que tu contrôles à 100%.</p>
+      <div class="row3" style="margin-top:34px;">
+        <div class="pcard"><div class="em">💰</div><div class="ph">Le principe du « 1R »</div><p>À chaque trade, je risque une somme fixe : <strong>1R = environ 1% du capital</strong>. Peu importe ma confiance, je ne risque jamais plus. Je raisonne en R, pas en dollars : ça enlève l'émotion du montant.</p></div>
+        <div class="pcard"><div class="em">🛑</div><div class="ph">Le stop-loss : sacré</div><p>Mon stop est défini <strong>avant</strong> d'entrer, et je n'y touche jamais pour le reculer. Le jour où tu recules ton stop « juste cette fois », c'est le début de la fin.</p></div>
+        <div class="pcard"><div class="em">📈</div><div class="ph">Le Stop Profit dynamique</div><p>Une fois le trade dans le bon sens, je remonte progressivement mon stop sous chaque nouveau creux (long) ou au-dessus de chaque sommet (short) pour sécuriser les gains.</p></div>
+      </div>
+      <div class="callout red" style="margin-top:auto;"><strong>⚠️ La leçon du trade #14 :</strong> un de mes plus gros gains (+5,43R) vient d'une <strong>erreur de sizing</strong> : mauvaise unité saisie sur mobile (USDT au lieu de tokens) → position surdimensionnée. J'ai eu de la chance que le prix aille dans mon sens. Si ça avait tourné, c'était -5R sur un seul trade. <strong>Ne reproduisez jamais ça : le 1R fixe reste sacré, même quand l'erreur paie.</strong> Un résultat positif ne valide jamais une erreur de gestion du risque.</div></div><div class="foot"><span>De 10K à 100K · La stratégie</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 6</div><div class="h2">Les leçons clés</div><div class="bar"></div>
+      <div class="lead">Au-delà des résultats individuels, quels patterns ressortent après 49 trades ?</div>
+      <div class="row2" style="margin-top:30px;flex:1;">
+        <div class="pcard" style="flex:1;"><div class="topbar" style="background:#22c98a;"></div><div class="ph" style="font-size:21px;color:#22c98a;">🥇 La foule, pas le funding</div><p>LE constat majeur. Le vrai carburant d'un squeeze, c'est une foule entière coincée du mauvais côté, pas un funding extrême. Le funding seul ment souvent : sur TNSR, il était à -0,82% (des shorts soi-disant piégés), mais les vendeurs avaient raison, perte sèche. <strong>C'est la foule ET les gros joueurs à contre-sens qui forcent le rachat. Pilier n°1, non négociable.</strong></p></div>
+        <div class="pcard" style="flex:1;"><div class="topbar" style="background:#3b82f6;"></div><div class="ph" style="font-size:21px;color:#3b82f6;">🥈 BTC est le patron des altcoins</div><p>Plusieurs trades ont échoué non pas à cause d’un mauvais setup, mais parce que Bitcoin a fait un mouvement brutal au même moment. Sur les low-caps, l’impact est immédiat. → Toujours vérifier le contexte BTC avant d’entrer.</p></div>
+      </div>
+      <div class="row2" style="margin-top:24px;flex:1;">
+        <div class="pcard" style="flex:1;"><div class="topbar" style="background:#a855f7;"></div><div class="ph" style="font-size:21px;color:#a855f7;">🥉 Le placement du stop est un art</div><p>Un stop dans une zone de liquidité évidente se fait chasser, même quand la thèse est juste : sur VELVET, le prix a grabé les stops des longs PILE avant d'exploser vers ma cible. → Placer les stops un cran plus loin que les zones « évidentes ».</p></div>
+        <div class="pcard" style="flex:1;"><div class="topbar" style="background:#f5b945;"></div><div class="ph" style="font-size:21px;color:#f5b945;">🏅 Manager sur la bonne unité de temps</div><p>Trade #13 : analyse et entrée en M5, mais management en M1 → trop de bruit, sortie prématurée à +0,24R alors que le mouvement a continué. → Garder le management sur l’UT d’entrée (M5), pas en dessous.</p></div>
+      </div>
+      <div class="callout green" style="margin-top:24px;"><strong class="green">💎 J'entre tôt, l'ignition sert à sortir, pas à entrer.</strong> Quand les 4 cases sont cochées, j'entre sur le setup amorcé : attendre l'explosion (la cascade de liquidations), c'est acheter le sommet. Cette cascade, c'est mon signal de SORTIE, au premier cluster. Le prix reverse au 1er cluster (APE, VELVET, RE), pas au lointain : je vise 3R là, pas un objectif fabriqué dans le vide.</div></div><div class="foot"><span>De 10K à 100K · Les leçons</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 7</div><div class="h2">Avertissement</div><div class="bar"></div>
+      <div class="lead" style="margin-top:20px;">La partie la moins fun, mais la plus importante. Si tu débutes, lis-la deux fois.</div>
+      <div class="callout red" style="margin-top:22px;"><strong style="font-size:19px;">🚨 Le trading à effet de levier peut te faire perdre tout ton capital, et plus vite que tu ne l'imagines.</strong> Tout ce que tu as vu utilise du levier (x5, x10). Le levier multiplie les gains, mais il multiplie les pertes exactement de la même façon.</div>
+      <p style="margin-top:20px;font-size:17px;"><strong>📊 49 trades ne prouvent rien statistiquement.</strong> 46,8% de win rate, profit factor 1,83, et des séries de pertes (jusqu'à 8 d'affilée). Un seul trade (#14) gonfle fortement ces chiffres par un sizing accidentel. Sur un si petit échantillon, le hasard joue un rôle énorme. La stratégie est prometteuse et documentée, pas garantie.</p>
+      <p style="margin-top:14px;font-size:17px;"><strong>🧠 Ce document est pédagogique, pas un signal d'achat.</strong> Je te partage ma méthode pour que tu apprennes à pêcher, pas pour copier mes trades en aveugle. Chaque trade que tu prends reste ta responsabilité.</p>
+      <p style="margin-top:14px;font-size:17px;"><strong>💸 Ne trade jamais avec de l'argent dont tu as besoin.</strong> Le capital de trading, c'est de l'argent que tu peux te permettre de perdre intégralement, sans que ça change ta vie.</p>
+      <p style="margin-top:14px;font-size:17px;"><strong>📜 Ceci n'est pas un conseil en investissement.</strong> Je ne suis pas ton conseiller financier. Pour des décisions adaptées à ta situation, consulte un professionnel agréé.</p>
+      <div class="quote" style="margin-top:auto;font-size:26px;">« Voici comment un trader pense, gère son risque, encaisse ses pertes et reste discipliné sur la durée. Le reste, c'est à toi de le construire. » 💪</div></div><div class="foot"><span>De 10K à 100K · Avertissement</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 8</div><div class="h2">Le tableau de bord</div><div class="bar"></div>
+      <div class="lead" style="margin-top:18px;">L'état du challenge après 49 trades. Tout est affiché, le bon comme le moins bon.</div>
+      <div class="sgrid" style="margin-top:26px;">
+        <div class="scard" style="padding:22px 26px;"><div class="v ">10 000 $</div><div class="l">Capital initial</div></div><div class="scard" style="padding:22px 26px;"><div class="v green" style="white-space:nowrap;font-size:32px;">11 680,62 $</div><div class="l">Capital actuel</div></div><div class="scard" style="padding:22px 26px;"><div class="v green">+18,65R</div><div class="l">Performance</div></div>
+        <div class="scard" style="padding:22px 26px;"><div class="v ">46,8%</div><div class="l">Win Rate</div></div><div class="scard" style="padding:22px 26px;"><div class="v amber">1,83</div><div class="l">Profit Factor</div></div><div class="scard" style="padding:22px 26px;"><div class="v ">6,61%</div><div class="l">Drawdown max</div></div>
+        <div class="scard" style="padding:22px 26px;"><div class="v green">+5,43R</div><div class="l">Meilleur trade</div></div><div class="scard" style="padding:22px 26px;"><div class="v red">-1,31R</div><div class="l">Pire trade</div></div><div class="scard" style="padding:22px 26px;"><div class="v ">8</div><div class="l">Pertes d&#39;affilée max</div></div>
+      </div>
+      <table style="margin-top:24px;">
+        <tr><th>Indicateur</th><th>Valeur</th><th>Lecture</th></tr>
+        <tr><td>Win Rate</td><td>46,8 %</td><td>Un peu moins d'un trade sur deux</td></tr>
+        <tr><td>Profit Factor</td><td>1,83</td><td>1,83 $ gagné pour 1 $ perdu sur 49 trades</td></tr>
+        <tr><td>Setups A / A+</td><td><strong>+25,08R / +3,01R</strong></td><td>Les entrées en confirmation portent toute la performance</td></tr>
+        <tr><td>Setups B / B+</td><td>-8,44R / -1R</td><td>Les anticipations restent perdantes : à durcir</td></tr>
+      </table>
+      <div class="callout amber" style="margin-top:auto;"><strong>⚠️ Le rappel qui compte :</strong> 49 trades, c'est un petit échantillon, et un seul trade (#14, sizing accidentel) gonfle fortement ces chiffres. Ne les prends pas comme une promesse de performance, prends-les plutôt comme le point de départ honnête d'un parcours qu'on documente ensemble.</div></div><div class="foot"><span>De 10K à 100K · Le tableau de bord</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Partie 8 · Suite</div><div class="h2">La courbe de capital</div><div class="bar"></div>
+      <div class="lead">Le parcours réel du compte, trade par trade. C'est ça, la vérité du trading : ça passe par des creux avant de remonter.</div>
+      <div style="margin-top:30px;"><svg viewBox="0 0 820 392" width="100%" style="background:#0e1420;border:1px solid #1c2633;border-radius:18px;">
+      <defs>
+      <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22c98a" stop-opacity="0.22"/><stop offset="100%" stop-color="#22c98a" stop-opacity="0"/></linearGradient>
+      <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="78" y1="0" x2="792" y2="0"><stop offset="0%" stop-color="#22c98a"/><stop offset="60%" stop-color="#22c98a"/><stop offset="80%" stop-color="#f5b945"/><stop offset="100%" stop-color="#f0616d"/></linearGradient>
+      </defs>
+      <line x1="78" y1="161.0" x2="792" y2="161.0" stroke="#1c2633" stroke-width="1"/><text x="69" y="165.0" fill="#5a6675" font-size="12" text-anchor="end">11 000 $</text>
+      <line x1="78" y1="44.0" x2="792" y2="44.0" stroke="#1c2633" stroke-width="1"/><text x="69" y="48.0" fill="#5a6675" font-size="12" text-anchor="end">12 000 $</text>
+      <line x1="78" y1="278.1" x2="792" y2="278.1" stroke="#22d3ee" stroke-width="1.3" stroke-dasharray="6,6" opacity="0.6"/><text x="69" y="282.1" fill="#22d3ee" font-size="12" text-anchor="end">10 000 $</text>
+      <polygon points="78.0,360 78.0,278.1 92.6,291.3 107.1,304.3 121.7,283.6 136.3,279.9 150.9,294.1 165.4,306.9 180.0,312.7 194.6,326.9 209.1,323.6 223.7,321.5 238.3,295.7 252.9,274.2 267.4,271.4 282.0,207.8 296.6,224.1 311.1,180.5 325.7,178.5 340.3,182.2 354.9,188.1 369.4,197.4 384.0,212.9 398.6,224.9 413.1,232.2 427.7,244.7 442.3,260.0 456.9,258.7 471.4,262.5 486.0,258.0 500.6,200.6 515.1,214.0 529.7,228.7 544.3,202.1 558.9,162.5 573.4,119.4 588.0,132.5 602.6,145.2 617.1,118.6 631.7,129.2 646.3,88.4 660.9,101.2 675.4,84.2 690.0,100.0 704.6,90.8 719.1,110.3 733.7,127.5 748.3,127.8 762.9,113.1 777.4,113.3 792.0,81.4 792.0,360" fill="url(#areaGrad)"/>
+      <polyline points="78.0,278.1 92.6,291.3 107.1,304.3 121.7,283.6 136.3,279.9 150.9,294.1 165.4,306.9 180.0,312.7 194.6,326.9 209.1,323.6 223.7,321.5 238.3,295.7 252.9,274.2 267.4,271.4 282.0,207.8 296.6,224.1 311.1,180.5 325.7,178.5 340.3,182.2 354.9,188.1 369.4,197.4 384.0,212.9 398.6,224.9 413.1,232.2 427.7,244.7 442.3,260.0 456.9,258.7 471.4,262.5 486.0,258.0 500.6,200.6 515.1,214.0 529.7,228.7 544.3,202.1 558.9,162.5 573.4,119.4 588.0,132.5 602.6,145.2 617.1,118.6 631.7,129.2 646.3,88.4 660.9,101.2 675.4,84.2 690.0,100.0 704.6,90.8 719.1,110.3 733.7,127.5 748.3,127.8 762.9,113.1 777.4,113.3 792.0,81.4" fill="none" stroke="url(#lineGrad)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="78" y1="360" x2="792" y2="360" stroke="#2a3645" stroke-width="1"/>
+      <circle cx="194.6" cy="326.9" r="4.5" fill="#f0616d"/><text x="194.6" y="346.9" fill="#f0616d" font-size="13" text-anchor="middle" font-weight="600">plus bas 9 583 $</text>
+      <circle cx="792.0" cy="81.4" r="5.5" fill="#0b0e15" stroke="#22c98a" stroke-width="2.5"/><text x="782.0" y="69.4" fill="#22c98a" font-size="15" text-anchor="end" font-weight="800">11 680,62 $</text>
+      <circle cx="78.0" cy="278.1" r="4" fill="#0b0e15" stroke="#22d3ee" stroke-width="2"/><text x="78" y="382" fill="#5a6675" font-size="11">départ</text><text x="792" y="382" fill="#5a6675" font-size="11" text-anchor="end">49 trades</text>
+      </svg></div>
+      <div class="row2" style="margin-top:30px;">
+        <div class="pcard"><div class="topbar" style="background:#22c98a;"></div><div class="em">📈</div><div class="ph">Le creux puis le sommet</div><p>Le compte plonge jusqu'à un plus bas de 9 583 $, puis les meilleurs trades, en confirmation, le propulsent à un sommet de 11 681 $.</p></div>
+        <div class="pcard"><div class="topbar" style="background:#f0616d;"></div><div class="em">📉</div><div class="ph">Le drawdown récent</div><p>La pire série atteint 8 pertes d'affilée (drawdown max 6,61%). Le compte est aujourd'hui à 11 680,62 $. Sur un petit échantillon, on traverse les creux avec un risque fixe.</p></div>
+      </div>
+      <div class="callout cyan" style="margin-top:auto;"><strong>💡 La leçon de cette courbe :</strong> sur un petit échantillon, l'ordre des trades crée des montagnes russes émotionnelles. C'est pour ça que la gestion du risque (1R fixe) et la discipline sont vitales : elles te permettent de survivre aux creux jusqu'à ce que ton avantage statistique s'exprime.</div></div><div class="foot"><span>De 10K à 100K · La courbe de capital</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+      <div style="font-size:170px;font-weight:800;color:#161d29;line-height:1;">07</div>
+      <div class="h2" style="font-size:54px;margin-top:10px;">Les <span class="green">49 trades</span>, décortiqués</div>
+      <div class="bar"></div>
+      <div class="lead" style="max-width:680px;font-size:21px;">Chaque trade en détail : contexte, thèse, plan, résultat, analyse post-trade et la leçon retenue, avec les captures d'écran réelles. <span class="green">Vert = gagnant</span>, <span class="red">rouge = perdant</span>.</div>
+    </div></div><div class="foot"><span>De 10K à 100K</span><span>@AlanTradingYT</span></div></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/01-fiche-home.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/02-fiche-clou.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/03-fiche-fida.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/04-fiche-beat.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/05-fiche-gun.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/06-fiche-gun.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/07-fiche-fida.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/08-fiche-esports.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/09-fiche-siren.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/10-fiche-stg.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/11-fiche-move.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page" style="padding:0;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/12-fiche-esports.jpg" style="width:924px;height:1316px;display:block;"/></div>
+<div class="page"><div class="body"><div class="kicker">Trade 13 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#13 ESPORTS <span class="badge b-short">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Confirmation (cassure neckline) · 09/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+0,24R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Binance +0,74% · Bybit +0,67% · Predicted positif</div>
+            <div class="ctx"><span class="k">Open Interest :</span> +35% sur 24h, +16% sur 4h, accumulation continue</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Setup préparé via le workflow de screening : 2 premiers piliers solides (funding positif réel Binance/Bybit, OI en hausse continue, très liquide, corrélation BTC nulle). M (double top) en formation, entrée prévue sur cassure de la neckline 0,08075.</p>
+            <div class="slab">🎯 Plan</div><p>Ordre conditionnel sur cassure de la neckline (prix « Marque » pour filtrer les mèches). Entrée APRÈS confirmation, pas de top picking.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le setup a parfaitement fonctionné : le M s'est validé, la neckline a cassé, la chute a suivi. MAIS le trade a été managé en M1 (alors que l'analyse et l'entrée étaient en M5). Trop de bruit sur l'UT inférieure → stop profit remonté trop agressivement → sortie prématurée à +0,24R, alors que le prix a ensuite fortement continué à la baisse.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Setup préparé et respecté</li><li>Entrée APRÈS confirmation</li><li>Les 3 piliers validés</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Management en M1 = trop de bruit</li><li>Sortie prématurée qui a laissé filer le mouvement</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,08080</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,07909</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,08813</div></div>
+          <div class="pb"><div class="k">Risque</div><div class="v">~100 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/13-esports-prix.png" style="width:100%;height:142px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/13-esports-ticket.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Garder le management des stops sur la même unité de temps que l'analyse et l'entrée (M5), pas en dessous. Le M1 fait sur-réagir au bruit et tue le potentiel.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #13 ESPORTS</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 14 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#14 ESPORTS <span class="badge b-short">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Ré-entrée sur continuation · 09/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+5,43R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Binance +0,74% · Bybit +0,67% · Predicted positif</div>
+            <div class="ctx"><span class="k">Open Interest :</span> +35% sur 24h, la thèse restait intacte</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Après la sortie prématurée du trade #13, le setup était toujours valide (funding + OI + momentum baissier intacts). Décision de ré-entrer pour capturer la suite du mouvement de chute.</p>
+            <div class="slab">🎯 Plan</div><p>Ré-entrée à la baisse, même stop que le trade précédent (0,08813).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le prix a continué de chuter comme prévu, validant la thèse de bout en bout. ⚠️ En toute transparence : la taille de position a été saisie par erreur en USDT au lieu du nombre de tokens (interface mobile), ce qui a fortement surdimensionné la position. Le gain réel est donc bien supérieur à 1R, mais le risque encouru l'était tout autant. À ne jamais reproduire.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Thèse validée de bout en bout</li><li>Gestion des stops propre</li><li>Setup respecté</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Taille saisie par erreur (USDT au lieu de tokens)</li><li>Gain réel mais non maîtrisé : chanceux, non reproductible</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,07768</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,07435</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,08813</div></div>
+          <div class="pb"><div class="k">Risque</div><div class="v">~100 USDT (visé)</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/14-esports-prix.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/14-esports-ticket.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Toujours vérifier l'unité du champ quantité (tokens, pas USDT) avant de valider, surtout sur mobile. Un résultat positif ne valide jamais une erreur de gestion du risque.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #14 ESPORTS</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 15 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#15 BLEND <span class="badge b-long">LONG</span> <span class="badge b-setupb">B</span></div><div class="fsub">Entrée anticipée sur contexte data exceptionnel · 10/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1,31R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Bybit -1,00% · Predicted -4,06%, des shorts qui payaient cher</div>
+            <div class="ctx"><span class="k">Open Interest :</span> +149% sur 24h, et qui montait encore au repérage</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Les deux premiers piliers (funding extrême + OI explosif) étaient parfaitement alignés, du jamais vu sur cette session de screening LONG.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée anticipée assumée (prix déjà bien grimpé, pas de cassure propre). Stop structurel sous la consolidation à 0,06288. Tagué « faible liquidité ».</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le prix a fait son sommet pile dans la zone d'entrée, puis a retourné sans jamais repasser au-dessus. Ensuite l'OI a débouclé et le prix s'est effondré : le setup s'était invalidé. La data était exceptionnelle, mais le mouvement déjà mûr au repérage.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Setup data réellement exceptionnel (pas un piège)</li><li>Stop structurel, pas arbitraire</li><li>Refus du « revenge long » quand l'OI a débouclé</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Entrée au sommet, sans cassure de continuation</li><li>Data explosive = mouvement déjà avancé</li><li>Slippage sur faible liquidité (-1R prévu, -1,31R réel)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,06622</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,06239</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,06288</div></div>
+          <div class="pb"><div class="k">Risque</div><div class="v">~106 USDT (1R)</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TRADE%20BLEND%201.png" style="width:100%;height:176px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TRADE%20BLEND%20PNL%201.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Une data explosive n'apparaît que parce que le mouvement a déjà commencé : on repère souvent le squeeze trop tard. Un contexte « A+ » ne rachète pas une entrée anticipée au sommet.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #15 BLEND</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 16 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#16 BLEND <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Entrée sur cassure de structure (W) après un repli · 10/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+3,51R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Bybit -2,18% · Predicted jusqu'à -3,29%, pression short maximale</div>
+            <div class="ctx"><span class="k">Open Interest :</span> en hausse continue pendant tout le trade (jusqu'à +281%)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Même coin que le #15, repris plus tard. Cette fois, au lieu de chasser le prix, j'attends une vraie structure : un double bottom (W). Le funding reste extrême.</p>
+            <div class="slab">🎯 Plan</div><p>Ordre conditionnel sur la cassure de la neckline du W (0,06217) : entrée APRÈS confirmation. Stop sous le creux du W.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>L'entrée sur cassure a tout changé : pas de chasse du sommet, un point d'invalidation logique. Le stop profit sous la vraie impulsion a évité une sortie prématurée avant l'envolée verticale.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entrée A : ordre sur cassure de neckline validée</li><li>Stop structurel sous le creux du W</li><li>Management discipliné, stop sous la vraie impulsion</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Coin à faible liquidité (slippage à l'entrée)</li><li>OI un peu en repli au moment de l'entrée</li><li>Sortie peut-être un cran trop tôt (à confirmer)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,06178</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,07703</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,05783</div></div>
+          <div class="pb"><div class="k">Gain</div><div class="v">+372 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/BLEND%20LONG%20WIN.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/BLEND%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Quand le mouvement est déjà entamé, ne pas chasser le prix : attendre une structure à casser (W en long) et entrer sur la cassure. Même coin que le #15 perdant, mais l'entrée disciplinée a transformé la perte en +3,51R.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #16 BLEND</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 17 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#17 ASTR <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Entrée sur W après une chasse de stops · 11/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+0,18R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Binance -1,43% · Bybit -1,20%, extrême et propre (pas de mirage)</div>
+            <div class="ctx"><span class="k">Open Interest :</span> +75% sur 24h, élevé mais en léger reflux (setup A, pas A+)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Le prix vient chasser les stops sous un creux, puis forme un double bottom (W). Au lieu de chasser, j'attends que la neckline du W casse. Funding toujours extrême.</p>
+            <div class="slab">🎯 Plan</div><p>Ordre conditionnel posé à l'avance sur la cassure de la neckline du W. Stop structurel sous le creux. Entrée APRÈS confirmation.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Exécution propre de bout en bout. Stop remonté sous chaque impulsion (jamais à breakeven « pour être tranquille »), puis passé au-dessus de l'entrée = profit verrouillé par la structure. Sortie sur essoufflement quand l'OI a commencé à débouler.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Patience : W attendu, pas de chasse</li><li>Stop géré par la structure, pas l'émotion</li><li>Sortie disciplinée sur essoufflement</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>OI déjà élevé : squeeze moins explosif (A, pas A+)</li><li>Gain modeste : le move n'a pas pris l'ampleur espérée</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,006140</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,006170</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,005974</div></div>
+          <div class="pb"><div class="k">Gain</div><div class="v">+17,57 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ASTR%20LONG.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px;justify-content:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ASTR%20LONG%20PNL%201.png" style="width:100%;border-radius:9px;display:block;"/><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ASTR%20LONG%20PNL%202.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un R petit avec une exécution parfaite vaut mieux qu'un gros gain mal maîtrisé : attendre la structure, gérer le stop par la structure, sortir avec discipline. Le process prime sur la taille du gain.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #17 ASTR</span><span>@AlanTradingYT</span></div></div>
+
+
+<div class="page"><div class="body"><div class="kicker">Trade 18 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#18 STG <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Cassure de structure (cup &amp; handle) puis essoufflement · 12/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-0,29R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Binance -1,87% · Bybit -1,69%, extrême et propre (pas de mirage)</div>
+            <div class="ctx"><span class="k">Open Interest :</span> +20% sur 24h, qui ré-accumulait encore à l'entrée</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Funding extrême + OI qui remonte. J'attends une cassure de structure (haut d'une consolidation type cup &amp; handle) au lieu de chasser le prix dans son trend.</p>
+            <div class="slab">🎯 Plan</div><p>Ordre conditionnel sur la cassure du plateau. Stop sous le dernier creux ascendant (vraie invalidation), pas dans le bruit.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>L'entrée a déclenché et le prix a grimpé jusqu'à +2R latent. Puis essoufflement : plus-hauts décroissants pendant que l'OI commençait à débouler (signal de fin de squeeze). Le stop, remonté sous la structure, a été touché sur le repli.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entrée APRÈS cassure, pas de chasse</li><li>Stop sous structure, jamais à breakeven</li><li>Sortie nette, gérée par le stop</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Squeeze qui s'est essoufflé (OI a débouclé)</li><li>Move pas allé au bout malgré +2R latent</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,63957</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,62489</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,61619</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-31,40 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un setup A bien exécuté peut perdre si le squeeze s'essouffle (OI qui débouclé). Garder le stop sous la structure, jamais à breakeven : une mèche au paiement de funding a traversé l'entrée sans casser la structure.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #18 STG</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 19 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#19 STG <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">2ᵉ essai sur STG · pullback de la neckline · 12/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-0,47R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Binance -1,40% · Bybit -1,32%, extrême et propre</div>
+            <div class="ctx"><span class="k">Open Interest :</span> faiblard : ~28,9M, +0,5% sur 24h, ne ré-accumulait plus</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Même coin que mon trade précédent, repris après une nouvelle structure. Funding toujours extrême, j'entre sur un pullback propre de la neckline du W plutôt que de chasser.</p>
+            <div class="slab">🎯 Plan</div><p>Conditionnel sur le retest de la neckline, stop sous le vrai dernier creux ascendant (invalidation réelle).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Funding parfait, structure parfaite… mais l'OI ne ré-accumulait plus : le squeeze n'avait plus de carburant. Le prix a reflué et touché le stop. Détail clé : Bitcoin <strong>montait</strong> au même moment, donc l'échec ne vient pas de BTC, mais bien de l'OI essoufflé du coin lui-même.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entrée sur pullback, pas de chasse</li><li>Stop émotionnel corrigé sous la vraie structure</li><li>Plan respecté jusqu'au bout</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>OI déjà faible à l'entrée (pas de ré-accumulation)</li><li>Setup pris malgré ce signal de prudence</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,63651</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,62760</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">~0,628</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-50,44 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST%202.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST%20PNL%202.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un funding extrême et une structure parfaite ne suffisent pas : sans un OI qui ré-accumule, le squeeze n'a pas de carburant. Et un échec pendant que BTC monte prouve que c'est l'OI du coin, pas Bitcoin, qui commande.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #19 STG</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 20 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#20 WAVES <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Squeeze sur micro-marché · SL initial tenu · 13/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-0,74R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif extrême sur Bybit, mais en affaiblissement progressif</div>
+            <div class="ctx"><span class="k">Open Interest :</span> microscopique (~1,3M$), mono-exchange, qui s'effondrait</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Funding négatif extrême = shorts surchargés, carburant pour un rebond. J'entre après confirmation, stop sous la structure d'invalidation, et je laisse le trade respirer.</p>
+            <div class="slab">🎯 Plan</div><p>Stop initial fixé sous le creux, jamais reculé. Je laisse le SL faire son travail sans intervenir.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le funding était là, mais l'Open Interest n'a jamais accompagné : il s'est effondré en continu, sans la moindre ré-accumulation. Pas d'OI = pas de carburant = pas de rebond. Le prix a glissé jusqu'au stop. Détail intéressant : étant long avec un funding négatif, j'ai <strong>encaissé les frais de funding</strong> pendant toute la durée, ce qui a réduit la perte sous le -1R plein.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Stop initial respecté, jamais reculé</li><li>Funding encaissé = perte amortie</li><li>Plan tenu de bout en bout</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>OI minuscule et déjà en chute à l'entrée</li><li>Marché mono-exchange = liquidité fragile</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,3078</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,2953</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,2951</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-79,47 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/WAVES%20LONG%20LOST.png" style="width:100%;height:200px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/WAVES%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un funding extrême sans Open Interest pour l'accompagner ne suffit pas, surtout sur un micro-marché. Bon réflexe en revanche : un stop tenu et, en long sur funding négatif, des frais encaissés qui réduisent la perte.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #20 WAVES</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 21 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#21 SAHARA <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Cassure de résistance · l'OI lâche après l'entrée · 14/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif et propre : Binance -0,66% · Bybit -0,62%</div>
+            <div class="ctx"><span class="k">Open Interest :</span> accumulation fraîche, qui montait encore à la cassure</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Le seul candidat propre sur près de 90 coins screenés. Funding négatif = shorts surchargés, carburant pour un rebond. En M5 le prix semblait sur ses plus-hauts, mais le H1 révélait un <strong>plancher</strong> après une grosse chute.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée conditionnelle sur la cassure d'une résistance multi-testée. Stop sous la dernière impulsion, jamais reculé. Management à la main.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Tout était propre : sélection, lecture H1+M5, entrée sur vraie cassure, stop à une vraie invalidation. Le trade est même parti à <strong>+1R latent</strong>. Puis le moteur s'est coupé : l'Open Interest a fait un sommet et s'est déboulé, le funding s'est affaibli. <strong>Mauvais timing, pas une erreur d'exécution.</strong></p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Seul setup propre de tout le screening</li><li>Vraie entrée en confirmation (cassure)</li><li>Stop à invalidation double, jamais reculé</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>OI retourné juste après l'entrée</li><li>Entrée au marché → slippage subi</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,015564</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,015353</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,015375</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-132,78 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/SAHARA%20LONG%20LOST.png" style="width:100%;height:142px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/SAHARA%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Lire le prix en H1 (contexte) avant le M5 (exécution) : ce qui ressemble à un sommet peut être un plancher. Et un setup parfait à l'entrée ne garantit rien : quand l'Open Interest se déboucle, le squeeze meurt, même en gain latent.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #21 SAHARA</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 22 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#22 H <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Meilleure data du jour · SL serré chassé · 14/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> propre et frais : Binance -1,25% · Bybit predicted -3,77% (qui se creuse)</div>
+            <div class="ctx"><span class="k">Open Interest :</span> massif, 105M$ multi-exchange, +106%/24h en accumulation</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>La meilleure data de la journée sur deux piliers : funding négatif propre qui se creuse + un Open Interest énorme et multi-exchange. Carburant idéal pour un short squeeze.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée sur cassure du sommet. Choix assumé d'un SL serré (~6%) pour un meilleur R:R, alors que le coin venait de faire +85% dans la journée.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Les deux premiers piliers étaient parfaits, l'OI a même continué de monter. Le problème : un coin déjà en x2 sur la journée respire violemment. Mon SL serré était dans cette zone de bruit → <strong>chassé par une simple mèche</strong>, puis le prix est reparti dans mon sens. La data ne compense jamais une entrée dans le bruit.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Data funding + OI exceptionnelle</li><li>Entrée sur vraie cassure</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>SL trop serré sur un coin parabolique</li><li>FOMO : pas attendu une structure propre</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,5650</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,5323</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,5300</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-102,88 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%20.png" style="width:100%;height:142px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Sur un coin qui a fait x2 dans la journée, la respiration est énorme : un SL serré se fait chasser. Il faut soit un SL large, soit attendre une vraie consolidation. Une data parfaite n'excuse jamais une entrée dans le bruit.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #22 H</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 23 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#23 H <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Réentrée · le signal OI ignoré · 14/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-0,59R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> toujours propre et frais, multi-exchange</div>
+            <div class="ctx"><span class="k">Open Interest :</span> 115M$, qui montait encore à l'entrée</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Réentrée sur le même coin après un vrai W propre, cette fois avec un stop large sous la structure (la leçon du trade précédent appliquée). La data restait la meilleure de la journée.</p>
+            <div class="slab">🎯 Plan</div><p>Stop large à 0,5117 sous le W. Plan de sortie : couper dès que l'Open Interest se déboucle (mon signal de fin n°1).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>J'étais dans le vert, prêt à couper à break-even quand l'OI a commencé à descendre, le bon réflexe. Mais le funding a rechuté fortement et je l'ai pris pour un retour du carburant, alors j'ai laissé courir. Une minute plus tard : chute de 14%, l'OI s'effondre. <strong>Quand l'OI et le funding se contredisent, l'OI prime.</strong> Le funding a amorti la perte.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>SL large sous structure (leçon appliquée)</li><li>Funding a réduit la perte</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Signal OI de sortie ignoré</li><li>Funding a détourné du bon réflexe</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,5724</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,5164</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,5117</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-62,26 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%202.png" style="width:100%;height:142px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%20LOST%20PNL%202.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Quand l'Open Interest (signal n°1) et le funding (signal n°2) se contredisent en cours de trade, l'OI prime. Un funding qui se retend sur un OI qui se déboucle, c'est souvent les derniers shorts juste avant le dump, pas un nouveau carburant.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #23 H</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 24 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#24 HOME <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Cassure de neckline d'un W · le squeeze ne s'enclenche pas · 16/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> extrême et propre : Binance -0,71% · Bybit -1,15%, sans Kraken</div>
+            <div class="ctx"><span class="k">Open Interest :</span> 25M$ liquide, ré-accumulation fraîche après un creux</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Seul candidat propre du screening. Mis en watchlist faute de structure, puis patience récompensée : une chasse aux stops, un repli, et un <strong>W</strong> se forme sur le prix ET sur l'Open Interest.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée conditionnelle sur la cassure de la neckline du W. Stop sous la chasse déjà consommée (serré mais structurel, coin en range calme).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Sélection, patience et entrée irréprochables. Mais le prix a buté sur la première résistance, l'a <strong>rejetée</strong>, puis l'Open Interest a topé et s'est déboulé pendant que le funding se résorbait. <strong>Le squeeze ne s'est jamais enclenché : marché, pas exécution.</strong></p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Patience : attente du pilier 3 (a évité une perte plus tôt)</li><li>Vraie entrée en confirmation (cassure de W)</li><li>Stop laissé travailler, zéro panique</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Rejet de la première résistance</li><li>OI topé, funding résorbé : carburant épuisé</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,029341</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,028481</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,028490</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-106,85 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/HOME%20LONG%20LOST.png" style="width:100%;height:142px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/HOME%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Vu en direct : quand l'Open Interest se déboucle, le prix suit, et le funding extrême ne sauve rien. L'OI est le juge de paix. Un setup parfait à l'entrée qui bute sur une résistance sans squeeze reste une perte propre, pas une erreur.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #24 HOME</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 25 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#25 H <span class="badge b-long">LONG</span> <span class="badge b-setup">A+</span></div><div class="fsub">1er trade détecté par mon radar automatique · fakeout de neckline · 17/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif et crédible, tiré par les gros exchanges (OKX -0,55% · Bybit -0,51%)</div>
+            <div class="ctx"><span class="k">Open Interest :</span> ~80M$, qui remonte avec le prix : des shorts qui commencent à se faire serrer</div>
+            <div class="slab" style="margin-top:18px;">💡 Thèse</div><p>Premier signal sorti par mon détecteur automatique. Coin pas encore parti, prix stabilisé après chute (vraie base, pas un couteau), funding qui se creuse, Open Interest qui monte : un squeeze en formation.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée conditionnelle sur la cassure de la neckline d'un <strong>W</strong>. Stop sous le W (structurel). Surveillance de l'Open Interest en direct à la minute.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Tout était réuni à l'entrée, exécution irréprochable. Mais peu après la cassure, l'Open Interest a <strong>spiké puis reflué net</strong> et le funding s'est résorbé : le breakout n'a pas tenu, retour au stop. <strong>Un fakeout de marché, pas une erreur.</strong></p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Détection automatique d'un vrai A+</li><li>Funding validé sur les gros exchanges</li><li>Plan structuré, stop laissé travailler</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Open Interest reflué juste après la cassure</li><li>Breakout non confirmé dans la durée</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,225191</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,209061</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,210890</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">-130,71 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%203.png" style="width:100%;height:124px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/H%20LONG%20LOST%203%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Mon détecteur a sorti un vrai setup que mon œil a validé. La perte vient d'un fakeout : l'Open Interest a lâché juste après la cassure. Un setup parfait peut perdre, ce n'est pas une erreur.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #25 H</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 26 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#26 PRL <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Patience récompensée : le coin rejeté deux fois devient un vrai setup · 18/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+0,11R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif et crédible, porté par les gros exchanges (OKX, Bybit, MEXC, Gate)</div>
+            <div class="ctx"><span class="k">Open Interest :</span> en escalier franc, des plus-hauts continus à la cassure : shorts qui se font serrer</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Mon radar avait sonné deux fois sur ce coin plus tôt, j'ai refusé : couteau qui tombe. J'ai posé une alerte et attendu. Le dump s'arrête, un bas se forme, une jambe haussière casse la structure. Cette fois c'est un vrai retournement.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée sur la cassure de structure, Open Interest frais confirmé en direct. Stop sous le chiffre rond et la première impulsion.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Entrée et gestion irréprochables. Stop monté à l'équilibre dès la première impulsion, puis remonté sous chaque nouveau plus-haut. Quand l'Open Interest a plafonné et le funding s'est calmé, le prix a reflué sur mon stop profit. <strong>Sortie en gain, le risque avait été neutralisé tôt.</strong></p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Patience : refus du couteau, attente du retournement</li><li>Open Interest frais à la cassure (vrai feu vert)</li><li>Stop profit dynamique : gain verrouillé par paliers</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Petit marché : slippage important à la sortie</li><li>Gain final modeste face au potentiel</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,1540</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,1548</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,1497</div></div>
+          <div class="pb"><div class="k">Gain</div><div class="v">+11,35 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/PRL%20LONG%20WIN.png" style="width:100%;height:124px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/PRL%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un même coin peut être un piège puis un cadeau. Rejeté deux fois en couteau, il est devenu un vrai setup une fois le dump terminé et la structure formée. La patience fait le trade, le radar ne fait que signaler.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #26 PRL</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 27 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #e0a23c;">
+        <div class="fhead">
+          <div><div class="ftitle">#27 PRL <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le même coin, un cycle de trop, mais la gestion limite les dégâts · 18/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#e0a23c;">−0,31R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> encore négatif mais qui se calmait déjà : carburant présent, pas parfait</div>
+            <div class="ctx"><span class="k">Open Interest :</span> nouveau plus-haut absolu et frais à la cassure : le bon signal d'entrée</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Troisième cycle du même coin dans la journée, repéré à l'œil sans alerte. L'Open Interest fait un nouveau plus-haut frais à la cassure de la neckline, l'entrée est légitime. Mais le funding se résorbe déjà : le carburant de ce cycle est entamé.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée conditionnelle sur la cassure, stop sous la dernière impulsion. Puis stop remonté deux fois pour réduire le risque au fil des nouveaux plus-hauts.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>L'Open Interest a plafonné puis reflué, le funding s'est calmé, et le prix a chuté <strong>violemment d'un coup</strong> après un dernier spike. Le stop profit a coupé net. <strong>La vraie victoire est la gestion : remonter le stop deux fois a transformé une perte pleine (−1R) en −0,31R.</strong></p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Open Interest frais à la cassure (entrée légitime)</li><li>Gestion exemplaire : stop remonté 2× → perte divisée par 3</li><li>Lecture du reflux en direct</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Troisième cycle : carburant déjà entamé (funding pas parfait)</li><li>Reflux post-sommet brutal, typique des petits marchés</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;">
+          <div class="pb"><div class="k">Entrée</div><div class="v">0,1586</div></div>
+          <div class="pb"><div class="k">Sortie</div><div class="v">0,1572</div></div>
+          <div class="pb"><div class="k">Stop</div><div class="v">0,1543</div></div>
+          <div class="pb"><div class="k">Perte</div><div class="v">−32,08 USDT</div></div>
+        </div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/PRL%20LONG%20LOST%20.png" style="width:100%;height:124px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/PRL%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Quand l'Open Interest plafonne et le funding se calme, le reflux est souvent brutal et soudain, pas une descente douce. Un stop profit serré à ce moment précis est obligatoire. Et même sur un trade perdant, une gestion disciplinée divise la perte par trois.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #27 PRL</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 28 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#28 ID <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Le 1er trade du détecteur V2 : un scratch sauvé par la data et le funding · 21/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+0,37R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif qui plonge (-0,69%), shorts entassés : carburant présent</div><div class="ctx"><span class="k">Données V2 :</span> ignition active mais CVD vendeur et RSI 80 : signal moyen, tard</div><div class="ctx"><span class="k">Heatmap :</span> gros amas de liquidations au-dessus (~0,034) : cible et épuisement</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Premier test réel du détecteur V2 (ignition, CVD, ratio long/short, RSI). Les shorts se font liquider, un amas attend au-dessus comme cible. Mais on entre au marché sans structure, sur une 3e jambe surachetée : un pari assumé, sauvé par le management.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée au marché, stop sous la zone, cible sur l'amas. L'entrée n'étant pas idéale, tout se joue sur le management : suivre la data en direct pour la sortie.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Rebond, rejet de l'amas, retour au point d'entrée. <strong>La data a tout fait :</strong> stop remonté au-dessus du point mort car la data faiblissait. Après la sortie, le prix est passé sous l'impulsion : un stop large aurait perdu. Le vert vient du funding et de la discipline, pas du prix.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Sortie pilotée par la data live</li><li>Funding encaissé (+37 USDT)</li><li>Stop serré validé : cassure plus bas après</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Entrée au marché, sans structure, tard</li><li>3e jambe, RSI 80 : déjà avancé</li><li>Pas de partielle sur le spike</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,0318</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,03182</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,03077</div></div><div class="pb"><div class="k">Gain</div><div class="v">+37,99 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ID%20LONG%20WIN.png" style="width:100%;height:108px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ID%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> La data prime sur tout. Le stop serré piloté par les données a battu le réflexe « laisse respirer » : le prix a cassé plus bas juste après la sortie.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #28 ID</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 29 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#29 TAIKO <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le plus gros win directionnel : un setup early parfait, un management chanceux · 23/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+4,86R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> négatif et qui chute, des shorts entassés qui paient : carburant LONG présent</div><div class="ctx"><span class="k">Données :</span> OI frais qui accélère (x2,83), prix encore plat, RSI au plancher (27) : tout est EARLY</div><div class="ctx"><span class="k">Heatmap :</span> un gros amas de liquidations short au-dessus (~0,077) : la cible, un aimant</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Le profil exact que cherche la stratégie : les shorts paient, l'argent frais entre, mais le prix n'est pas parti et le RSI est au plancher. On entre TÔT, à la base, avant le mouvement. L'inverse du #28, entré tard et suracheté.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée sur la base, stop serré sous la structure (1R), cible l'amas de liquidations au-dessus, et on laisse le funding très négatif payer pendant la tenue.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le funding très négatif a payé gros à chaque règlement de 8h. Le prix a accumulé toute la nuit puis spiké au matin. Sortie au marché sur une alerte pré-posée, juste avant la cible : le prix a ensuite chuté. <strong>Honnêteté :</strong> stop non géré la nuit, sortie à l'instinct ; sélection excellente, management chanceux.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entrée EARLY propre : prix plat, RSI survendu, OI frais</li><li>Gros funding encaissé sur funding très négatif</li><li>Sortie sur alerte, juste avant l'épuisement</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Stop non géré la nuit : gain tenu par chance</li><li>Pas de partielle sur le spike</li><li>Sortie à l'instinct, pas sur la data</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,06714</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,07085</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,06604</div></div><div class="pb"><div class="k">Gain</div><div class="v">+490,36 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TAIKO%20LONG%20WIN.png" style="width:100%;height:108px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TAIKO%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Le meilleur point d'entrée est souvent le plus calme : prix plat, RSI au plancher, argent frais. Et un funding très négatif paie gros aux règlements de 8h.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #29 TAIKO</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 30 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#30 OPG <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Breakout sans carburant data, le faux signal type V3.1 · 25/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> agregat ~0% au ping (reconstitue API, ping perdu), aucun short a squeezer</div><div class="ctx"><span class="k">Donnees :</span> OI 6,20 a 6,54 M$ a la cassure puis reflux a 6,18 M$ = faux breakout</div><div class="ctx"><span class="k">Heatmap :</span> cible TP 0,1827 = top du jour + full liq, jamais approchee</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Premier trade pris via le detecteur V3.1 SCORE. Ping PREMIUM 3/5, mais le score venait de l'OI et du momentum, pas du funding. Breakout haussier d'une base vers 0,1602, visant le retour au top 0,1827.</p>
+            <div class="slab">🎯 Plan</div><p>Entree 0,1602 sur la cassure, stop structurel 0,1543 sous la base, cible 0,1827 (top + cluster de liquidations). Risque 1R = 107 USDT, soit 1% du capital.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le breakout casse sans fuel : funding plat (aucun short a squeezer) et OI qui pompe a la cassure puis reflue en 30 min, les longs sont pieges, grab de liquidite. Macro 24h a -9,5% et coin illiquide (~6 M$) rendent ce breakout contre-tendance peu probable. Reversal immediat, stop plein.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entree au ping, propre</li><li>Stop structurel serre</li><li>Sizing 1R discipline</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Funding ~0, aucun edge</li><li>OI reflue, faux breakout</li><li>Contre-tendance 24h + illiquide</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,1602</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,1542</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,1543</div></div><div class="pb"><div class="k">Perte</div><div class="v">-114,27 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/OPG%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/OPG%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un breakout sans funding aligne ni OI qui tient = faux breakout. La compo du score prime : 3/5 sans funding extreme vaut un 1/5.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #30 OPG</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 31 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#31 ONDO <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Le jumeau d'OPG, breakout liquide mais sans edge data · 25/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> agregat ~0% au ping (reconstitue API), leger positif = plutot anti-long</div><div class="ctx"><span class="k">Donnees :</span> OI 28,96 a 29,83 M$ a la cassure puis reflux a 29,6 M$ = faux breakout</div><div class="ctx"><span class="k">Heatmap :</span> cible 0,3376 = full liq heatmap (pas le top), jamais atteinte</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Deuxieme trade V3.1 du jour, jumeau d'OPG. Ping PREMIUM 3/5 porte par l'OI et le momentum. Vrai pattern bull cette fois (coin liquide, 24h a +3,2%) : breakout du plus-haut du rally vers 0,3209.</p>
+            <div class="slab">🎯 Plan</div><p>Entree market 0,3209 sur la cassure, stop 0,3178 sous la structure, cible 0,3376 (cluster de liquidations). Risque 1R = 107 USDT, soit 1% du capital.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Setup chartiste plus propre qu'OPG (liquide, dans le sens 24h), mais meme defaut data : funding ~0 et OI qui pompe a la cassure puis reflue tout de suite = faux breakout, les longs se font sortir. Sans short a squeezer, la jambe n'a pas de fuel. Reversal direct, stop plein.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Coin liquide (~29 M$)</li><li>Pattern bull dans le sens 24h</li><li>Entree et stop propres</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Funding ~0, pas d edge</li><li>OI reflue, faux breakout</li><li>Aucun short a squeezer</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,3209</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,3176</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,3178</div></div><div class="pb"><div class="k">Perte</div><div class="v">-126,01 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ONDO%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ONDO%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Meme un breakout propre et liquide fade sans funding aligne. Lire le funding AVANT le reste : 3/5 sans funding extreme = 1/5.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #31 ONDO</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 32 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#32 TNSR <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le squeeze de cluster joué parfait, et présent cette fois · 25/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+2,19R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> funding ~0 au ping, pas une squeeze funding</div><div class="ctx"><span class="k">Données :</span> OI accel x11,63 ; 13,5k$ de shorts liquidés = le cluster qui se vide</div><div class="ctx"><span class="k">Heatmap :</span> cluster à 0,03754 = le TP auto ; le prix a percé à 0,0403</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Ping PREMIUM 3/5 (OI, prix, spot ; funding ~0). Pas un setup funding, un setup HEATMAP : un gros cluster de liquidations short au-dessus = l aimant. Le radar flague, la heatmap vise.</p>
+            <div class="slab">🎯 Plan</div><p>Attendre un PULLBACK après le ping, entrée 0,03523, stop 0,03429 sous la structure (1R = 104 USDT), TP AUTO posé sur le cluster 0,03754.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Exécution modèle : chop 1h puis short-squeeze vertical (+6,77%, 13,5k$ de shorts liquidés) qui vide le cluster jusqu à 0,0403. Auto-TP à 0,03754 = présent cette fois (vs POPCAT/TAIKO ratés). Banké +2,19R sans courir le top.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Pullback patient, entrée parfaite</li><li>TP auto sur le cluster</li><li>Présent (auto-TP)</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Funding ~0, pas l edge funding</li><li>A laissé du R (high +14%)</li><li>Crowd 49/51, sans contrepartie</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,03523</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,03754</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,03429</div></div><div class="pb"><div class="k">Gain</div><div class="v">+227,78 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TNSR%20LONG%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TNSR%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Le WIN vient du CLUSTER + l exécution + la présence, PAS du funding (comp identique à OPG/ONDO perdants). Confirme le backtest s26.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #32 TNSR</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 33 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#33 EPIC <span class="badge b-long">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Le 1er counter-trade du bot, gagnant (fade du pump en plein crash BTC) · 25/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+3,19R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Contexte :</span> flash crash BTC -> déluge de LONGS sur le rebond = le pire moment pour longer</div><div class="ctx"><span class="k">Le ping :</span> le bot a pingé LONG le TOP d un pump (fakeout) = signal SHORT contrarian</div><div class="ctx"><span class="k">Manage :</span> le bot v3.3 a pingé 🔴 REFLUX (OI top + CVD se retourne) = sortie pilotée</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Le détecteur n a pas d edge (backtest), et en plein crash ses LONGS sur pumps exhaustés sont des shorts. Le pari : fader le fakeout sur une bougie de ravalement.</p>
+            <div class="slab">🎯 Plan</div><p>Attendre le rejet du fakeout, short 0,4558, SL 0,4638 au-dessus du high, TP reverse 0,4241. 2 fills pour mettre 1R (coin plafonné Zoomex, turnover 2,1M).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le pump fade, OI reflue (4,95M -> 4,5M). Le manage bot (1re validation live) ping 🔴 REFLUX -> SL serré agressif -> sorti ~0,4290 juste avant le TP. Banké +3,19R (somme des 2 fills). Léger re-pump après = re-test possible.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Lecture du contexte crash = top</li><li>Bougie de ravalement patiente</li><li>Manage bot piloté parfait</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Counter-trade = hors process bot</li><li>Sorti avant le TP (mais propre)</li><li>Coin peu liquide (2 fills)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,4558</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,4291</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,4638</div></div><div class="pb"><div class="k">Gain</div><div class="v">+337,85 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/EPIC%20SHORT%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/EPIC%20SHORT%20WIN%20PNL1.png" style="width:100%;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/EPIC%20SHORT%20WIN%20PNL2.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Le 1er counter-trade GAGNANT : en crash, les LONGS du bot sur pumps exhaustés sont des SHORTS. L edge = TON exécution + le contexte, pas la détection.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #33 EPIC</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 34 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#34 HMSTR <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Continuation de tendance, TP sous le cluster · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+3,36R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> ~0 (OI-weight +0,01%), non aligné</div><div class="ctx"><span class="k">Données :</span> OI 14,1 vers 15,2 M$, foule 62% short</div><div class="ctx"><span class="k">Heatmap :</span> cluster short au-dessus = cible du TP</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>La foule est nette short dans un uptrend et l'OI monte encore : des shorts sous l'eau à squeezer, continuation plus probable qu'un retournement.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée en continuation à 0,0001693, SL structurel 0,0001668 (1R). TP 0,0001778, juste sous le cluster heatmap pour banker sans greed.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>L'OI fait de nouveaux plus-hauts jusqu'à la sortie (vraie continuation, pas un faux breakout). Funding reste à zéro : le moteur n'est pas le funding mais le cluster et l'exécution. Grind ordonné, sans cascade de liquidations.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Entrée continuation, pas de chasse au prix</li><li>TP posé sous le cluster, zéro greed</li><li>Laisse respirer le creux, data intacte</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Ping en zone déjà haute (RSI 1h chaud)</li><li>Funding nul, edge porté par l'exécution</li><li>Creux mi-trade stressant à tenir</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,0001693</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,0001778</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,0001668</div></div><div class="pb"><div class="k">Gain</div><div class="v">+368,77 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/HMSTR%20LONG%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/HMSTR%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Laisser respirer se justifie par la DATA (OI qui tient, structure intacte), pas par l'espoir. Le cluster et l'exécution font le win, pas le funding.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #34 HMSTR</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 35 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#35 EIGEN <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Breakout funding-zero, le 3e jumeau d'OPG/ONDO · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> ~0 (+0,017%), non aligné = anti-long</div><div class="ctx"><span class="k">Données :</span> foule équilibrée, OI pic puis reflux</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP loin (0,264, +17%)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Breakout d'un range visé vers le cluster du dessus. Mais aucun carburant : funding nul, foule équilibrée, pas de shorts à squeezer.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée breakout 0,22536, SL structurel 0,21663 (1R), TP au cluster 0,26410. R:R large mais sur une cassure sans fuel.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Faux breakout : l'OI a pompé au top (36,9M) puis reflué pendant la chute (longs piégés). CVD négatif tout du long = aucune vraie demande, le prix montait sur du vide. Reversal direct au SL.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>SL structurel propre, pas de BE de confort</li><li>Risque tenu à 1R, sortie nette</li><li>Plan clair : cassure + cible cluster</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Breakout SANS carburant (funding 0, foule neutre)</li><li>CVD négatif = pas de demande réelle</li><li>Cible cluster trop loin (+17%) pour le fuel</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,22536</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,21661</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,21663</div></div><div class="pb"><div class="k">Perte</div><div class="v">-112,12 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/EIGEN%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/EIGEN%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un breakout sans carburant (funding nul, foule neutre, CVD négatif) = pile-face. 3e jumeau d'OPG/ONDO. La V3.4 l'aurait mis en shadow.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #35 EIGEN</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 36 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#36 STG <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Breakout à fort carburant mais sans ignition · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> -0,066% aligné (modéré, pas extrême)</div><div class="ctx"><span class="k">Données :</span> foule 68% short, mais ignition OFF</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP loin (0,191, +18%)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Foule 68% short + funding négatif = gros carburant de squeeze. Breakout du range visé vers le cluster du dessus.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée breakout 0,16163, SL structurel 0,15702 (1R), TP au cluster 0,19123. Le carburant était là, on attendait l'allumage.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Mais le squeeze n'a jamais ignité (ignition OFF tout du long). Le breakout a chopé puis reversé, l'OI a débouclé, le CVD s'est effondré. Les shorts avaient raison, rien ne les a forcés à couvrir.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Vrai carburant : foule 68% short + funding</li><li>SL structurel propre, 1R tenu</li><li>Lecture data correcte au départ</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Pas d'ignition = squeeze qui ne part pas</li><li>Breakout choppy, sans follow-through</li><li>Cible cluster trop loin (+18%)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,16163</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,15673</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,15702</div></div><div class="pb"><div class="k">Perte</div><div class="v">-108,17 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST%203.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/STG%20LONG%20LOST%20PNL%203.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Carburant (foule short + funding) sans IGNITION = le squeeze ne part pas, les shorts gagnent. V3.4 garderait ce 4/5 : le score n'est pas un filtre magique.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #36 STG</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 37 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#37 WIF <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le breakout funding-zéro qui continue jusqu'au cluster · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+2,04R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> 0,001% agrégé, quasi nul (contexte, pas un signal).</div><div class="ctx"><span class="k">Données :</span> OI 49,4 M$ +1,75%/15m (×4,86), CVD +123k acheteurs, RSI 1h 53.</div><div class="ctx"><span class="k">Heatmap :</span> Cluster de liquidité ~0,1595-0,16 au-dessus = cible TP.</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Ping PREMIUM 3/5 momentum LONG sur cassure du range 0,143-0,148. Funding nul, mais OI qui accélère (×4,86) et CVD acheteur net : la demande pousse vers le cluster heatmap.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée cassure 0,1474, SL large sous la structure 0,1425 (~3,3% = 1R). Cible = cluster heatmap ~0,1595-0,16. Laisser courir jusqu'au cluster ou au SL.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le soir, le prix frôle le SL (mèche ~0,143) sans le toucher : structure intacte. La nuit, la tendance reprend et file taper le cluster. Sortie 0,1593, pile sur l'aimant.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>SL large bien placé : encaisse la mèche du soir sans sauter.</li><li>Cible sur le cluster heatmap : sortie pile dessus (0,1593).</li><li>Laisser respirer = bon ici (SL intact, momentum + CVD acheteur).</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Funding nul : profil des breakouts perdants (EIGEN/STG).</li><li>Pas de contrepartie short à squeezer : tient au seul momentum.</li><li>Frôle le SL la nuit : marge faible, se joue à peu.</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,1474</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,1593</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,1425</div></div><div class="pb"><div class="k">Gain</div><div class="v">+226,98 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/WIF%20LONG%20WIN%20.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/WIF%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Breakout funding-zéro peut courir si momentum + CVD acheteur + cluster au-dessus. SL bien placé : laisser vivre jusqu'au cluster, ne pas paniquer sur une mèche.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #37 WIF</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 38 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#38 TNSR <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le piège à longs : funding négatif ≠ squeeze · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> Au ping ~0, puis PLONGE à -0,82% : des shorts entassés, mais qui avaient raison.</div><div class="ctx"><span class="k">Données :</span> Foule 53% LONG, CVD qui se dégrade (-1,4M→-2,1M), OI qui fond (28→25M), longs liquidés.</div><div class="ctx"><span class="k">Heatmap :</span> Cluster cible ~0,046 au-dessus, jamais atteint.</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Ping PREMIUM 3/5 momentum LONG sur cassure, ignition ON. Pari : la cassure du range continue vers le cluster 0,046. Mais la foule est DÉJÀ longue (53%) : ce sont les longs qui sont exposés, pas les shorts.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée cassure 0,04080, SL 0,03859 sous le range (1R), cible cluster ~0,046. Pas de management du SL (data-only).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le breakout n'a jamais tenu. La data API le montre : malgré un funding qui plonge à -0,82% (shorts qui paient), le CVD reste vendeur et se DÉGRADE, l'OI FOND (28→25M) et ce sont les LONGS qui se font liquider en série. Les shorts avaient raison. Le prix grind down jusqu'au SL (~03h30).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>SL non bougé (data-only) : perte contenue, zéro management sur l'espoir.</li><li>Funding reçu (long) : perte amortie à -90,98$ (sous 1R).</li><li>La data confirmait la sortie : CVD et OI rouges tout du long.</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Foule déjà 53% LONG : ce sont les longs qui étaient exposés (piège).</li><li>CVD se dégrade + longs liquidés = pas de squeeze, les shorts gagnent.</li><li>Funding -0,82% = leurre : extrême ne veut pas dire dans MON sens.</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,0408</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,0384</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,03859</div></div><div class="pb"><div class="k">Perte</div><div class="v">-90,98 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TNSR%20LONG%20LOST%20.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/TNSR%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Funding extrême ≠ squeeze. Le feu vert = foule OPPOSÉE + CVD dans mon sens + OI qui monte + l'autre camp liquidé. Sur TNSR tout était inversé.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #38 TNSR</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 39 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#39 RENDER <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Le 1er trade V3.4 : foule short squeezée jusqu'au cluster · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+3,10R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> 0,002% ~nul (contexte). Le moteur c'est la foule, pas le funding.</div><div class="ctx"><span class="k">Données :</span> Foule 66% SHORT, CVD acheteur (s'améliore), OI ×45,6, RSI 1h 54.</div><div class="ctx"><span class="k">Heatmap :</span> Cluster ~1,626 au-dessus = cible TP, atteint (sortie 1,6231).</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>1er ping de la formule V3.4 (crowd_against moteur). Profil manuel du squeeze long : foule 66% SHORT à squeezer + CVD acheteur + OI qui accélère (×45,6), RSI avec marge (54). Funding ~0 mais ce n'est pas le moteur.</p>
+            <div class="slab">🎯 Plan</div><p>Entrée sur PE pullback 1,5340 (sous la cassure 1,5411 = meilleur R:R), SL 1,5083 sous la structure (1R), cible cluster heatmap ~1,626. Pas de management du SL (data-only).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Data API : foule SHORT tout du long (0,50-0,53), CVD qui s'améliore (-2,8M -> -1,9M = acheteurs absorbent), OI qui tient (42-44M), et 34k$ de SHORTS liquidés (vs 127$ de longs) = vrai short-squeeze. Après le 1er pump à 1,548, chop de plusieurs heures (un BE = sorti) puis run jusqu'au cluster. Sortie 1,6231.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Profil V3.4 parfait : foule short + CVD acheteur + OI tient = squeeze.</li><li>Entrée PE pullback (1,5340) : R:R optimisé vs chasser la cassure.</li><li>SL non bougé (data-only) : le chop post-pump aurait sorti un BE.</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Funding ~0 : pas d'edge funding, tout repose sur foule + flux.</li><li>Long chop de plusieurs heures : il faut tenir sans paniquer.</li><li>0 exchanges propres au ping (consensus funding faible).</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">1,534</div></div><div class="pb"><div class="k">Sortie</div><div class="v">1,6231</div></div><div class="pb"><div class="k">Stop</div><div class="v">1,5083</div></div><div class="pb"><div class="k">Gain</div><div class="v">+348,95 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RENDER%20LONG%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RENDER%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Profil gagnant confirmé (3e fois) : foule OPPOSÉE + CVD dans mon sens + OI qui tient + l'autre camp liquidé. La V3.4 a pingé pile ça ; SL non bougé = la clé.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #39 RENDER</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 40 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#40 CHIP <span class="badge b-long">LONG</span> <span class="badge b-setup">B</span></div><div class="fsub">Setup B, faux breakout · 26/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> -0,016% oi-weighted, legerement negatif</div><div class="ctx"><span class="k">Donnees :</span> foule 62% short (crowd_against), CVD +152k, OI x21 (+4%/15m)</div><div class="ctx"><span class="k">Heatmap :</span> gros cluster cible a 0,0337 (R:R ~3,7)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Squeeze long : foule majoritairement short = carburant, OI qui accelere et acheteurs au marche. Cible = le gros cluster heatmap a 0,0337.</p>
+            <div class="slab">🎯 Plan</div><p>Entree sur cassure, SL sous la structure (0,0285), TP cluster 0,0337. Erreur : entree anticipee (B) a 0,0296 au lieu d'attendre la cloture au-dessus du vrai breakout 0,0302.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Au ping le profil est bon mais ne tient pas : des l'entree l'OI reflue (28,4M vers 26,5M) et le CVD repasse vendeur. Zero ignition, aucune cascade de liquidations. Le prix wicke 0,0302 sans jamais le tenir = faux breakout, puis grind jusqu'au SL.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Bon profil au ping (crowd_against + CVD + OI accelere)</li><li>Cible data reelle a 3R (le gros cluster heatmap)</li><li>SL respecte, aucune moyenne a la baisse</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Entree B anticipee au lieu du vrai breakout 0,0302</li><li>Pas attendu la confirmation : OI deja en reflux</li><li>Le discriminant ne s'est pas maintenu apres l'entree</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,02962</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,02853</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,02852</div></div><div class="pb"><div class="k">Perte</div><div class="v">-109,07 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/CHIP%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/CHIP%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Le discriminant doit SE MAINTENIR apres l'entree (OI qui s'etend, acheteurs qui restent, ca liquide en face), pas juste un instantane au ping.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #40 CHIP</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 41 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#41 APE <span class="badge b-long">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A SHORT, sortie au cluster · 26-27/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+1,42R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> -0,041% au ping (oi-weighted), negatif</div><div class="ctx"><span class="k">Donnees :</span> foule 62% long (crowd_against), CVD vendeur, OI x0,36</div><div class="ctx"><span class="k">Heatmap :</span> gros cluster 0,140 (le TP 0,1255 dans le vide)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Squeeze short : foule majoritairement longue = carburant, CVD vendeur. Le vrai aimant = le gros cluster heatmap a 0,140 ; le 2e cluster 0,1255 est trop loin et trop petit.</p>
+            <div class="slab">🎯 Plan</div><p>Entree A sur la cassure + PE 0,14898, SL initial 0,15568. Gestion data-only : laisser vivre jusqu'au SL ou au cluster, puis trailer sous le cluster une fois atteint.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Foule longue tenue 17h (crowd_against) + CVD vendeur + longs liquides = sens valide. Mais OI en bleed (-11%) = flush par debouclage, pas de shorts frais : move qui s'epuise au cluster 0,140. Sortie en trailant le SL sous le cluster a 0,13948.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Gestion data-only : pas de BE premature, on tient jusqu au cluster</li><li>Cible recadree sur le vrai cluster 0,140 (pas le vide a 0,1255)</li><li>Trail du SL sous le cluster une fois atteint = +1,42R</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>TP initial place a 0,1255 par envie de 3R (recadre en cours)</li><li>OI en bleed = squeeze sans shorts frais, extension limitee</li><li>Pas un 3R : le vrai cluster n etait qu a ~1,4R</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,14898</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,13948</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,15568</div></div><div class="pb"><div class="k">Gain</div><div class="v">+144,89 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/APE%20SHORT%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/APE%20SHORT%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> On banke au VRAI cluster de liquidite (le gros), on ne chasse pas un 2e cluster lointain dans le vide pour faire du R. Plus a l'aise de sortir sans cluster dessous.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #41 APE</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 42 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#42 VELVET <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG, stop-hunt avant le cluster · 28/06/2026 · Levier 5x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> +0,02% au ping (oi-weighted), quasi nul</div><div class="ctx"><span class="k">Donnees :</span> foule 69% short + smart 71% short (crowd_against), CVD acheteur, OI qui build</div><div class="ctx"><span class="k">Heatmap :</span> cluster cible 1,745 (atteint), liquidite des longs sous 1,53</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Vrai squeeze : foule ET smart money short = carburant piege, CVD acheteur, OI qui build. La cible = le cluster heatmap 1,745. Profil WIF/RENDER, 1er vrai squeeze du jour sur 8 pings.</p>
+            <div class="slab">🎯 Plan</div><p>Entree A sur le pullback + PE 1,59826, SL 1,52351 sous la conso, TP au cluster 1,85 (3,8R). Gestion data-only : tenir tant que les shorts restent piegees et que le CVD tient.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>These realisee a 100% : apres 4h de bataille (shorts jamais couverts), 93k$ de shorts liquides en 1 bougie ont propulse le prix au cluster 1,7476. MAIS un flush a grab la liquidite des longs (wick a 1,515) et stoppe le trade PILE avant l'explosion. Stop-hunt classique.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>These 100% juste : direction et cluster lus parfaitement (bot + data)</li><li>Execution disciplinee : SL respecte, jamais bouge sur l espoir</li><li>Entree sur pullback, pas chasse : R:R propre a 3,8R</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>SL au niveau evident sous la conso = la cible du stop-hunt</li><li>SL dans la zone de liquidite (heatmap) au lieu de dessous</li><li>Slippage et frais sur alt violent : perte reelle au-dela de 1R</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">1,59826</div></div><div class="pb"><div class="k">Sortie</div><div class="v">1,51534</div></div><div class="pb"><div class="k">Stop</div><div class="v">1,52351</div></div><div class="pb"><div class="k">Perte</div><div class="v">-134,71 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/VELVET%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/VELVET%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Sur un squeeze haute-conviction, le SL va SOUS la liquidite (heatmap), pas au niveau evident qui se fait sweeper. These juste, hunt subi : l edge est dans le placement du stop.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #42 VELVET</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 43 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#43 RE <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG, trail du SL, sortie au cluster · 28/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+0,73R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Funding :</span> -0,98% (le + extreme du jour), carburant + funding recu</div><div class="ctx"><span class="k">Donnees :</span> foule 80% short + smart 90% short (crowd_against), OI qui build</div><div class="ctx"><span class="k">Heatmap :</span> cluster proche 0,6542 (atteint), far 0,6975 (vise a tort)</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Vrai squeeze : funding -0,98% extreme + foule ET smart short (piegees) + OI qui build. La cible realiste = le cluster proche ~0,65, pas le far 0,6975.</p>
+            <div class="slab">🎯 Plan</div><p>Entree A pullback + PE 0,6217, SL 0,6016 (~3,8R). Absent (resto) : trail du SL au-dessus du BE, sous la bougie d'impulsion, pour securiser sans pouvoir suivre la data.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Une cascade de 23,8k$ de shorts liquides a propulse au cluster proche 0,6542. Pile au top : OI tope (61,3M) + CVD se retourne + longs liquides = signature de reflux s23. Le prix reverse au cluster et revient au BE. SL traile = sortie 0,6306, +0,73R (dont +32,72 funding).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Trail du SL au-dessus du BE en etant absent = gain securise au reversal</li><li>Funding -0,98% : on est paye pour tenir (+32,72 de boost)</li><li>Direction et entree justes : squeeze reel, pullback discipline</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>TP vise trop loin (0,6975) alors que le cluster reel etait 0,6542</li><li>Pas de check data au breakout = banker au top rate (~1,7R possible)</li><li>Le prix reverse AU cluster, encore (comme APE, VELVET)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,6217</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,6306</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,6016</div></div><div class="pb"><div class="k">Gain</div><div class="v">+78,37 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RE%20LONG%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RE%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Banker au PREMIER vrai cluster (le 3R), pas anticiper un cluster lointain : le prix reverse AU cluster. Si dispo, lire la data au breakout (OI tope + CVD tourne = bank).</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #43 RE</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 44 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#44 VVV <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG premium, squeeze sans ignition, stop plein · 28/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees :</span> foule 0,52 ET smart 0,55 short (crowd_against), CVD +, OI qui build a l'entree</div><div class="ctx"><span class="k">Ignition :</span> JAMAIS : 5,6k$ de shorts liquides sur la fenetre vs 19k$ de longs</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP 14,495 (4,7R), 1er cluster 14,029 jamais atteint</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Setup squeeze classique : foule ET smart short piegees + CVD acheteur + OI qui build. La data semblait porter vers le cluster 14,495.</p>
+            <div class="slab">🎯 Plan</div><p>Entree breakout + PE 13,6507, SL 13,481 (1R), TP cluster 14,495. Tenir en data-only tant que le squeeze pousse (OI build + shorts liquides).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Le prix monte a 13,87 (+1,6%) puis tope, loin du 1er cluster 14,029. L'ignition n'arrive JAMAIS : shorts a peine liquides (5,6k$), OI pic 65,9M a 18:15 puis fond. A 22:00 l'OI est rendu et le prix revient au BE = la data a tourne. Stop a 23:15, sortie 13,4295 (slippage).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Setup statique correct : crowd_against net + CVD positif + OI build a l'entree</li><li>Entree disciplinee sur le PE, SL plein respecte (pas de BE panique)</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Pris sur le setup sans attendre l'IGNITION (cascade de shorts absente)</li><li>TP 4,7R irrealiste vs une energie qui ne porte qu'a +1,6%</li><li>Data-only : sortie ~BE ratee vers 22:00 quand l'OI s'est rendu</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">13,6507</div></div><div class="pb"><div class="k">Sortie</div><div class="v">13,4295</div></div><div class="pb"><div class="k">Stop</div><div class="v">13,481</div></div><div class="pb"><div class="k">Perte</div><div class="v">-166,57 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/VVV%20LONG%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/VVV%20LONG%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Le setup ne suffit pas : sans IGNITION (OI qui pousse + cascade de shorts), un squeeze n'est qu'un grind. Skip, ou couper vite si ca ne s'allume pas.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #44 VVV</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 45 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #f0616d;">
+        <div class="fhead">
+          <div><div class="ftitle">#45 BASED <span class="badge b-long">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A SHORT premium, faux breakdown sans ignition, stop plein · 28/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#f0616d;">-1R<br><span style="font-size:15px;"><span class="badge b-perte">PERTE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees :</span> foule 1,5 ET smart 1,7 long (crowd_against), CVD vendeur, cluster vide en dessous</div><div class="ctx"><span class="k">Ignition :</span> JAMAIS : OI FOND sur la cassure (27,7M -> 25,3M), longs non piegees</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP 0,07238 (5,8R), jamais approche</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Bon profil short : foule ET smart long (a dumper) + CVD vendeur + gros cluster vide a 0,072. Conditionnel pour ne fill que sur la cassure = l'ignition.</p>
+            <div class="slab">🎯 Plan</div><p>Sell-stop 0,08155, SL 0,08313 (1R), TP cluster 0,07238. Ne s'active que si le prix casse par le bas (longs liquides en cascade attendue).</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>La cassure fill a 0,08131 puis plus bas 0,07968 (-2%) et rejet immediat. L'OI FOND tout du long (deleveraging, longs qui closent, pas piegees) : aucune cascade. Le prix repasse au-dessus de l'entree des 22:00, la foule grossit (1,4->1,85) ET a raison. Grind jusqu'au SL a 04:15, sortie 0,08358 (slippage).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Profil statique correct : crowd_against net + CVD vendeur + cluster vide</li><li>Conditionnel malin (ne prendre que sur la cassure) + SL plein respecte</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>L'OI fondait sur la cassure = pas d'ignition : signal d'esquive ignore</li><li>Faux breakdown : rejet au-dessus de l'entree en <1h = these invalidee</li><li>TP 5,8R/-11% irrealiste vs un move de -2%</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,08131</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,08358</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,08313</div></div><div class="pb"><div class="k">Perte</div><div class="v">-146,80 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/BASED%20SHORT%20LOST.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/BASED%20SHORT%20LOST%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Une cassure sans OI qui build est un faux breakdown : les longs closent, ils ne sont pas piegees. Pas d'ignition = pas de trade, meme avec le bon profil.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #45 BASED</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 46 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #6b7787;">
+        <div class="fhead">
+          <div><div class="ftitle">#46 CHIP <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG premium, 1er management DATA-ONLY live, sortie BE · 29/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#6b7787;">BE<br><span style="font-size:15px;"><span class="badge" style="background:#3a4452;color:#cdd6e0;">BE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees ping :</span> foule 0,79 short (crowd_against) + smart 1,07 long, CVD +6k (bruit), OI ×1,06</div><div class="ctx"><span class="k">Ignition :</span> JAMAIS allumee : 0$ de shorts liquides en 2h</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP 0,03286 (4,21R), jamais approche</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Setup amorce correct (foule short, OI qui build, CVD aligne, cluster a 4,21R), pris en EARLY. On guette l'ignition pour aller au cluster.</p>
+            <div class="slab">🎯 Plan</div><p>Entree PE 0,03042, SL 0,02984 (1R), TP cluster 0,03286. Management 100% data-only : tenir tant que le squeeze se charge, sortir si la data tourne.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>2h plus tard : 0 short liquide, 2 pushes a 0,0309 revendus, OI qui roule (pic 28,86M puis fond), CVD qui se retourne sur le rebond. La data a tourne sans jamais igniter = pattern VVV. Sortie manuelle a BE (0,03043) sur lecture data, AVANT le SL.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Sortie data-only en live : data qui tourne (OI roule + CVD down + 0 ignition) = on sort</li><li>BE securise au lieu d'un dud a -1R (cf. VVV/BASED non manages)</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Entree sur setup amorce mais smart money long (pas short) = signal moyen</li><li>CVD +6k au ping = magnitude bruit (vrai squeeze = +300k)</li><li>Marche choppy (regime hostile) : peu de suivi</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,03042</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,03043</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,02984</div></div><div class="pb"><div class="k">BE</div><div class="v">-2,83 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/CHIP%20LONG%20BE.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/CHIP%20LONG%20BE%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> 1er management data-only en live : un setup qui n'ignite pas (0 short liquide, OI qui roule, CVD down) se sort a BE, pas au SL. La data tourne = on sort, sans espoir.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #46 CHIP</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 47 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#47 ACT <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG premium (1er ping V3.7), ignition reelle, trail sous structure · 29/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+1,12R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees ping :</span> IGNITION (18k$ shorts ejectes) + OI +7,24%/15m + funding -0,10% + CVD +45k</div><div class="ctx"><span class="k">V3.7 :</span> premium via la voie OI-FORT (oi_strong), pas crowd_against (foule 61% long)</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP 0,015942 (~3,9R), top a 0,014601 SOUS le cluster</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Momentum long qui IGNITE : shorts liquides + OI qui build fort + funding aligne. 1er ping de la voie V3.7 OI-fort.</p>
+            <div class="slab">🎯 Plan</div><p>Entree breakout 0,012373, SL 0,011476 (1R), TP cluster 0,015942. Data-only : rider tant que ca ignite, trailer le SL sous la structure.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>Squeeze +24% (OI +21%, 72k$ shorts liquides) jusqu'a 0,014601. MAIS rallye nourri aux LIQUIDATIONS (divergence CVD) = fragile. A 15:05 reversal violent (CVD -270k, 50k$ longs liquides, OI crater) : le SL sous 0,013628 catch a 0,01333 = +1,07R. Far TP jamais atteint.</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Plan respecte : data + SL SOUS la structure (L12) = catch le reversal en profit</li><li>1er WIN de la voie V3.7 OI-fort, vrai trade igne</li><li>+300 vu, +125 verrouille au lieu de tout rendre</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Rallye liquidation-fuel (divergence CVD) = reverse violemment</li><li>Foule deja longue + RSI 62 = peu de relais d'acheteurs</li><li>Far TP 0,015942 jamais atteint (top sous le cluster)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,012373</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,01333</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,011476</div></div><div class="pb"><div class="k">Gain</div><div class="v">+125,94 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ACT%20LONG%20WIN.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/ACT%20LONG%20WIN%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Parabolique nourri aux liquidations (divergence CVD) = reverse vite quand les shorts sechent. Le SL traile SOUS la structure (L12) catch le reversal en profit.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #47 ACT</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 48 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #6b7787;">
+        <div class="fhead">
+          <div><div class="ftitle">#48 SIREN <span class="badge b-long">SHORT</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A SHORT premium, short sans ignition, sortie BE data-only · 29/06/2026 · Levier 5x</div></div>
+          <div class="fres" style="color:#6b7787;">BE<br><span style="font-size:15px;"><span class="badge" style="background:#3a4452;color:#cdd6e0;">BE</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees ping :</span> foule 4,2 long ET smart 4,6 long (crowd_against FORT), CVD aligne, funding +0,05%</div><div class="ctx"><span class="k">Ignition :</span> JAMAIS : 5k$ de longs liquides en 6h, OI qui fond (-4,4%)</div><div class="ctx"><span class="k">Heatmap :</span> cluster TP 0,03357 (~4,4R), jamais approche</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Bon profil short : foule ET smart massivement long (a dumper) + CVD vendeur soutenu (-330k). Cluster TP 0,03357 a 4,4R. On short la cassure.</p>
+            <div class="slab">🎯 Plan</div><p>Entree breakout 0,03638, SL 0,03702 (1R), TP cluster 0,03357. Data-only : tenir si le CVD porte + longs liquides, sortir si la data tourne.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>6h de grind laborieux (-1,7% max), JAMAIS d'ignition : les longs (4,2) n'ont pas capitule (5k$ liquides), OI a bled (-4,4%) au lieu de pieger. Le CVD (seul moteur, -330k) a STALLE. Le prix a mean-reverte a l'entree 0,03638 = grab du BE. SL monte a BE = sortie 0R (au lieu de -1R).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Lecture data : senti l'absence de conviction (pas d'ignition + OI fond) -> BE</li><li>BE securise au lieu de -1R quand le prix revient (2e scratch sauve du jour)</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Short "setup sans ignition" : profil statique bon mais move jamais venu</li><li>OI qui fond (-4,4%) = longs qui sortent calmement, pas pieges = pas de fuel</li><li>Cluster TP 0,03357 jamais approche (-6% non parcourus)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,03638</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,03642</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,03702</div></div><div class="pb"><div class="k">BE</div><div class="v">-1,98 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/SIREN%20SHORT%20BE.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/SIREN%20SHORT%20BE%20PNL.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Un short au bon profil mais SANS ignition (longs non liquides, OI qui fond, CVD qui stalle) mean-reverte. Le BE data-only sauve le -1R. Version SHORT de VVV/BASED.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #48 SIREN</span><span>@AlanTradingYT</span></div></div>
+<div class="page"><div class="body"><div class="kicker">Trade 49 / 49</div><div style="margin-top:22px;flex:1;display:flex;"><div class="fiche" style="border-left:6px solid #22c98a;">
+        <div class="fhead">
+          <div><div class="ftitle">#49 RE <span class="badge b-long">LONG</span> <span class="badge b-setup">A</span></div><div class="fsub">Setup A LONG premium, funding extreme, vrai squeeze banke au cluster · 29/06/2026 · Levier 10x</div></div>
+          <div class="fres" style="color:#22c98a;">+2,39R<br><span style="font-size:15px;"><span class="badge b-gain">GAIN</span></span></div>
+        </div>
+        <div class="fhr"></div>
+        <div class="fcols">
+          <div class="fcol">
+            <div class="slab">📊 Contexte</div>
+            <div class="ctx"><span class="k">Donnees ping :</span> funding -0,607% EXTREME + foule 42/58 short (crowd_against) + CVD aligne (4/5)</div><div class="ctx"><span class="k">Ignition :</span> REELLE : 154k$ de shorts liquides en vagues, OI qui build (+6%)</div><div class="ctx"><span class="k">Heatmap :</span> cluster proche 0,6554 (tague a 0,6589), far TP 0,6975 jamais atteint</div>
+            <div class="slab" style="margin-top:20px;">💡 Thèse</div><p>Vrai squeeze : funding -0,607% extreme + foule short (a squeezer) + CVD aligne. Ici le funding extreme CARBURE (l'ignition suit), il n'est pas tard.</p>
+            <div class="slab">🎯 Plan</div><p>Entree breakout 0,5999, SL 0,5819 (1R), TP far 0,6975. Data-only : rider l'ignition, banker au cluster proche, trail sous structure.</p>
+          </div>
+          <div class="fcol">
+            <div class="slab">🔍 Analyse post-trade</div><p>2 jambes (154k$ shorts liquides) jusqu'a 0,6589 = tag du cluster 0,6554. La 2e jambe en DIVERGENCE (prix plus haut mais OI+CVD plus bas = epuisement). Bank au cluster en suivant le prix : sortie 0,6444 = +2,39R. Far TP 0,6975 jamais atteint (reverse au cluster).</p>
+            <div class="ff">
+              <div style="flex:1;"><div class="h green">✅ Points forts</div><ul><li>Vrai squeeze igne (154k$ shorts liquides) ride proprement</li><li>Banke au cluster (divergence) au lieu de chasser le far TP = +2,39R</li><li>Trail adaptatif : large pendant l'ignition, serre a l'epuisement</li></ul></div>
+              <div style="flex:1;"><div class="h amber">⚠️ Points faibles</div><ul><li>Far TP 0,6975 vise a tort (le prix reverse AU cluster, 4e fois)</li><li>Funding extreme = a surveiller (a marche ici car ignition)</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="prices" style="margin-top:22px;"><div class="pb"><div class="k">Entrée</div><div class="v">0,5999</div></div><div class="pb"><div class="k">Sortie</div><div class="v">0,6444</div></div><div class="pb"><div class="k">Stop</div><div class="v">0,5819</div></div><div class="pb"><div class="k">Gain</div><div class="v">+272,80 USDT</div></div></div>
+        <div style="margin-top:18px;"><div style="display:flex;gap:16px;align-items:stretch;"><div style="flex:1.6;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;overflow:hidden;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RE%20LONG%20WIN%202.png" style="width:100%;height:112px;object-fit:cover;border-radius:9px;display:block;"/></div><div style="flex:1;background:#0e1420;border:1px solid #1c2633;border-radius:14px;padding:10px;display:flex;align-items:center;"><img src="https://raw.githubusercontent.com/AlanTradingYT/trades-img/main/RE%20LONG%20WIN%20PNL%202.png" style="width:100%;border-radius:9px;display:block;"/></div></div></div>
+        <div class="lecon" style="margin-top:22px;"><b>LEÇON :</b> Vrai squeeze (funding extreme + ignition reelle) : banker au CLUSTER proche en suivant le prix, pas le far TP (reverse au cluster, 4e fois). Trail large puis serre a l'epuisement.</div>
+      </div></div></div><div class="foot"><span>De 10K à 100K · Trade #49 RE</span><span>@AlanTradingYT</span></div></div>
+</body></html>
